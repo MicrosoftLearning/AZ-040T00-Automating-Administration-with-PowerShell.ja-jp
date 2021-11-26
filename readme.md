@@ -1,6 +1,3 @@
-wtqltihqewo;t
-qtpqwerotipwerot
-
 # INF99X: Sample Course
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
