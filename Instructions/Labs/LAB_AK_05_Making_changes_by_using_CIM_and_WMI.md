@@ -1,14 +1,14 @@
 ---
 lab:
-  title: 'ラボ: WMI と CIM を使った情報のクエリ'
+  title: 'ラボ: WMI と CIM を使って情報についてのクエリを実行する'
   type: Answer Key
   module: 'Module 5: Querying management information by using CIM and WMI'
-ms.openlocfilehash: 95b694f6ae9eba3a6a1904f99c7ce3d942fb99ee
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: e0531bc1486e9cd6cf05607934da80c3b9ce9338
+ms.sourcegitcommit: dca48f28a6753becf280d7814397cb9a415fa951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116710"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "145180218"
 ---
 # <a name="lab-querying-information-by-using-wmi-and-cim"></a>ラボ: WMI と CIM を使った情報のクエリ
 
@@ -88,18 +88,25 @@ ms.locfileid: "132116710"
 ### <a name="task-4-query-service-information"></a>タスク 4: サービス情報をクエリする
 
 1. サービスについての情報を含むリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+    
     ```powershell
     Get-WmiObject -Namespace root\cimv2 -List | Where Name –like '*service*' | Sort Name
     ```
+    
     `Win32_Service` クラスに注目してください。
+    
 1. インスタンス プロパティと値の一覧を表示するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-WmiObject -Class Win32_Service | FL *
    ```
+   
 1. 指定した情報を表示するには、**Windows PowerShell** コンソールで、次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-WmiObject –Class Win32_Service –Filter "Name LIKE 'S%'" | Select Name,State,StartName
    ```
+   
 1. 次の演習のために、**Windows PowerShell** コンソールを開いたままにします。
 
 # <a name="exercise-2-querying-information-by-using-cim"></a>演習 2: CIM を使った情報のクエリ
@@ -107,25 +114,32 @@ ms.locfileid: "132116710"
 ### <a name="task-1-query-user-accounts"></a>タスク 1: ユーザー アカウントをクエリする
 
 1. ユーザー アカウントを一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-CimClass -ClassName *user*
    ```
+   
    `Win32_UserAccount` クラスに注目してください。
+   
 1. クラス プロパティの一覧を表示するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-CimInstance -Class Win32_UserAccount | Get-Member
    ```
+   
 1. 指定した情報を表示するには、**Windows PowerShell** コンソールで、次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-CimInstance -Class Win32_UserAccount | Format-Table -Property Caption,Domain,SID,FullName,Name
    ```
+   
    返されたすべてのドメインおよびローカル アカウントの一覧に注目してください。
 
 ### <a name="task-2-query-bios-information"></a>タスク 2: BIOS 情報をクエリする
 
 1. BIOS 情報を含むリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
 
-    ```
+    ```powershell
     Get-CimClass -ClassName *bios*
     ```
 
@@ -142,10 +156,13 @@ ms.locfileid: "132116710"
 ### <a name="task-3-query-network-adapter-configuration-information"></a>タスク 3: ネットワーク アダプターの構成情報をクエリする
 
 1. すべてのローカル `Win32_NetworkAdapterConfiguration` インスタンスの一覧を表示するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-CimInstance -Classname Win32_NetworkAdapterConfiguration
    ```
+   
 1. **LON-DC1** 上にあるすべての `Win32_NetworkAdapterConfiguration` インスタンスの一覧を表示するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+   
    ```powershell
    Get-CimInstance -Classname Win32_NetworkAdapterConfiguration -ComputerName LON-DC1
    ```
@@ -173,9 +190,10 @@ ms.locfileid: "132116710"
 ### <a name="task-1-invoke-a-cim-method"></a>タスク 1: CIM メソッドを呼び出す
 
 1. **LON-DC1** を再起動するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
-   ```powershell
-   Invoke-CimMethod -ClassName Win32_OperatingSystem -ComputerName LON-DC1 -MethodName Reboot
-   ```
+   
+    ```powershell
+    Invoke-CimMethod -ClassName Win32_OperatingSystem -ComputerName LON-DC1 -MethodName Reboot
+    ```
    **ReturnValue=0** と **PSComputerName=LON-DC1** を含む応答に注目してください。
 1. **LON-DC1** 仮想マシンに切り替えて、再起動を確認します。
 1. 再起動が完了したら、**LON-CL1** 仮想マシンに戻ります。
@@ -183,17 +201,20 @@ ms.locfileid: "132116710"
 ### <a name="task-2-invoke-a-wmi-method"></a>タスク 2: WMI メソッドを呼び出す
 
 1. WinRM サービスのプロパティを確認するには、**Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
+    
     ```powershell
     Get-Service WinRM | FL *
     ```
     **StartType** が **Manual** であることを確認してください。
 1. 指定したサービスの起動モードを変更するには、**Windows PowerShell** コンソールで、次のコマンドを入力し、Enter キーを押します。
+    
     ```powershell
     Get-WmiObject -Class Win32_Service -Filter "Name='WinRM'" | Invoke-WmiMethod -Name ChangeStartMode -Argument 'Automatic'
     ```
 1. WinRM サービスの StartType が変更されたことを確認するには、**Windows PowerShell** コンソールで、次のコマンドを入力し、Enter キーを押します。
-   ```powershell
-   Get-Service WinRM | FL *
-   ```
+   
+    ```powershell
+    Get-Service WinRM | FL *
+    ```
 
    **StartType** が **Automatic** であることを確認してください。

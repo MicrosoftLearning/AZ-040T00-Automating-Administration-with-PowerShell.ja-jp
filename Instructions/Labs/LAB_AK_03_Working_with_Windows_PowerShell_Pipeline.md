@@ -3,12 +3,12 @@ lab:
   title: 'ラボ: PowerShell パイプラインの使用'
   type: Answer Key
   module: 'Module 3: Working with the Windows PowerShell pipeline'
-ms.openlocfilehash: 536f2a2ee69cf86cf01678b708633a2b0b26c332
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 6c41faa9b0c0c7a3eb41b5ffe58c273ac12ed917
+ms.sourcegitcommit: dca48f28a6753becf280d7814397cb9a415fa951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116734"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "145180219"
 ---
 # <a name="lab-using-powershell-pipeline"></a>ラボ: PowerShell パイプラインの使用
 
@@ -122,20 +122,20 @@ ms.locfileid: "132116734"
       Get-NetFirewallRule 
       ```
 
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
       ```powershell
       Help Get-NetFirewallRule –ShowWindow
       ```
   
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
       ```powershell
       Get-NetFirewallRule –Enabled True
 
       ```
 
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
   
       ```powershell
       Get-NetFirewallRule –Enabled True | Format-Table -wrap
@@ -163,13 +163,13 @@ ms.locfileid: "132116734"
       help Get-NetNeighbor –ShowWindow
       ```
 
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
       ```powershell
       Get-NetNeighbor
       ```
 
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
       ```powershell
       Get-NetNeighbor | Sort-Object –Property State
@@ -187,12 +187,6 @@ ms.locfileid: "132116734"
 
       ```powershell
       Test-NetConnection LON-DC1
-      ```
-
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
-
-      ```powershell
-      Test-NetConnection LON-CL1
       ```
 
 1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
@@ -342,7 +336,7 @@ ms.locfileid: "132116734"
    Get-Volume | Where-Object { $PSItem.SizeRemaining -gt 0 } | fl
    ```
 
-1. コンソールで、次のコマンドを入力してから、Enter キーを押します。
+1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
    ```powershell
    Get-Volume | Where-Object { $PSItem.SizeRemaining -gt 0 -and $PSItem.SizeRemaining / $PSItem.Size -lt .99 }| Select-Object DriveLetter, @{n='Size';e={'{0:N2}' -f ($PSItem.Size/1MB)}}
