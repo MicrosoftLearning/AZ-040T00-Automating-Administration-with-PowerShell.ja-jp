@@ -33,9 +33,9 @@ ms.locfileid: "132116727"
 
 パスワード: **Pa55w.rd**
 
-このラボでは、提供されている仮想マシン環境を使用します。 ラボを開始する前に、次の手順を完了します。
+このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開いて、**Adatum\\Administrator** として、パスワード **Pa55w.rd** を使ってサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って **Adatum\\Administrator** としてサインインします。
 1. **LON-CL1** について手順 1 を繰り返します。
 
 ## <a name="exercise-1-activating-the-azure-subscription-and-installing-the-powershell-az-module"></a>演習 1: Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール

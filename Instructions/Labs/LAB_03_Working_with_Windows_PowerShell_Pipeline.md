@@ -108,7 +108,7 @@ Adatum Corporation の管理タスクの 1 つは、高度な PowerShell スク�
 
 ### <a name="exercise-1-results"></a>演習 1 の結果
 
-この演習を完了すると、環境の管理情報を含むカスタム レポートをいくつか作成したことになります。
+この演習を完了すると、環境からの管理情報を含むカスタム レポートがいくつか生成されているはずです。
 
 ## <a name="exercise-2-filtering-objects"></a>演習 2: オブジェクトのフィルター処理
 
