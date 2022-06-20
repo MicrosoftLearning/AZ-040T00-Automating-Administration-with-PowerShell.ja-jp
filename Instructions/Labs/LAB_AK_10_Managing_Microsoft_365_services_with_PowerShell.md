@@ -3,12 +3,12 @@ lab:
   title: 'ラボ: PowerShell を使用した Microsoft 365 の管理'
   type: Answer Key
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
-ms.openlocfilehash: 3e49f0acbf55c9edaa8ce1033ad99aecd0e0a586
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: bed969d7321c01a318d873fc5fb9682c269bd0d4
+ms.sourcegitcommit: dca48f28a6753becf280d7814397cb9a415fa951
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116709"
+ms.lasthandoff: 05/19/2022
+ms.locfileid: "145180220"
 ---
 # <a name="lab-answer-key-managing-microsoft-365-with-powershell"></a>ラボの回答キー: PowerShell を使用した Microsoft 365 の管理
 
@@ -296,7 +296,7 @@ ms.locfileid: "132116709"
 
 ### <a name="task-1-connect-to-microsoft-teams"></a>タスク 1: Microsoft Teams に接続する
 
-1. SharePoint Online Management Shell をインストールするには、**Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
+1. Microsoft Teams PowerShell Module をインストールするには、 **[Windows PowerShell]** コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
    Install-Module MicrosoftTeams
