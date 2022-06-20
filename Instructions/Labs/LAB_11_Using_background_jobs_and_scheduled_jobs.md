@@ -36,7 +36,7 @@ ms.locfileid: "132116712"
 
 このラボでは、提供されている仮想マシン (VM) 環境を使用します。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開いて、**Adatum\\Administrator** として、パスワード **Pa55w.rd** を使用してサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使用して **Adatum\\Administrator** としてサインインします。
 1. **LON-SVR1** および **LON-CL1** に対して手順 1 を繰り返し行います。
 
 ## <a name="exercise-1-starting-and-managing-jobs"></a>演習 1: ジョブの開始と管理
@@ -123,7 +123,7 @@ ms.locfileid: "132116712"
     - セキュリティ オプション: **[ユーザーがログオンしているかどうかにかかわらず実行する]** と **[最高の特権で実行する]**
     - トリガー設定: **[毎日]** 。時刻は現在の時刻の 5 分後に設定します
     - アクション: **プログラムまたはスクリプト** を **PowerShell.exe** に設定します
-    - 引数の追加 (省略可能): 「 **-ExecutionPolicy Bypass E:\\Labfiles\\Mod11\\DeleteDisabledUserManagersGroup.ps1**」と入力します
+    - 引数の追加 (省略可能): 「**-ExecutionPolicy Bypass E:\\Labfiles\\Mod11\\DeleteDisabledUserManagersGroup.ps1**」と入力します
     - 設定: **[タスクが既に実行中の場合に適用される規則]** を **[既存のインスタンスの停止]** に設定します
 
 1. 5 分後に、タスク **Managers セキュリティ グループから、無効にされたユーザーを削除する** の履歴を確認します。

@@ -17,7 +17,7 @@ ms.locfileid: "132116742"
 ### <a name="task-1-start-the-console-application-as-administrator-and-pin-the-windows-powershell-icon-to-the-taskbar"></a>タスク 1: 管理者としてコンソール アプリケーションを起動し、Windows PowerShell アイコンをタスク バーにピン留めする
 
 1. **LON-CL1** で、 **[開始]** を選びます。
-1. 「**powershell**」と入力して Windows PowerShell アイコンを表示します。 アイコン名が **Windows PowerShell (x86)** ではなく **Windows PowerShell** と表示されていることを確認します。
+1. 「**powershell**」と入力して、Windows PowerShell アイコンを表示します。 アイコン名が **Windows PowerShell (x86)** ではなく **Windows PowerShell** と表示されていることを確認します。
 1. **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選びます。
 1. ウィンドウのタイトル バーに **"管理者"** と表示され、 **"(x86)"** というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者が実行していることを示しています。
 1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで Windows PowerShell コンソールが開き、**管理者** によって実行され、今後もタスク バーで使用できるようになりました。
@@ -334,7 +334,7 @@ ms.locfileid: "132116742"
 
    モーダル ウィンドウに表示される **about_Comparison_Operators** ヘルプの **-Like** 演算子に注目してください。
 
-1. **-Like** 演算子を見つけるには、 **[検索]** テキストボックスに「**wildcard**」と入力し、 **[次へ]** を選びます。
+1. **-Like** 演算子を見つけるには、**[検索]** テキストボックスに「**wildcard**」と入力し、**[次へ]** を選びます。
 
 1. **about_Comparison_Operators** ファイルを確認すると、一般的な演算子では大文字と小文字が区別されないことがわかります。 **about_Comparison_Operators** で大文字と小文字を区別する特定の演算子が用意されています。
 

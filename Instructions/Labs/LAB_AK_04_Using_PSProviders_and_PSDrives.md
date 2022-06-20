@@ -16,7 +16,7 @@ ms.locfileid: "132116711"
 
 ### <a name="task-1-create-a-new-folder-on-a-remote-computer"></a>タスク 1: リモート コンピューターに新しいフォルダーを作成する
 
-1. **LON-CL1** で、 **[スタート]** を選択して、「**powersh**」と入力します。
+1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
 1. 結果リストで、 **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選択します。
 1. **New-Item** コマンドレットのヘルプを別のウィンドウで確認するには、**Administrator: Windows PowerShell** コンソールで次のコマンドを入力し、Enter キーを押します。
 

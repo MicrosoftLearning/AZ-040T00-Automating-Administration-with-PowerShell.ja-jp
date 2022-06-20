@@ -127,7 +127,7 @@ ms.locfileid: "132116726"
    Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddress 172.16.0.12
    ```
 
-2. コンソールで、次のコマンドを入力し、Enter キーを押します。
+2. コンソールで、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Remove-NetRoute -InterfaceAlias Ethernet -DestinationPrefix 0.0.0.0/0 -Confirm:$false

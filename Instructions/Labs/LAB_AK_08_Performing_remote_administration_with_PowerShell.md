@@ -172,7 +172,7 @@ ms.locfileid: "132116730"
 ### <a name="task-1-create-a-persistent-remoting-connection-to-a-server"></a>タスク 1: サーバーへの永続的なリモート処理接続を作成する
 
 1. **LON-CL1** で、パスワード **Pa55w.rd** を使用して **Adatum\\Administrator** としてサインインしていることを確かめます。
-1. Windows PowerShell ウィンドウが閉じている場合は、 **[スタート]** メニューを選択してから、「**powersh**」と入力します。
+1. Windows PowerShell ウィンドウが閉じている場合は、**[スタート]** メニューを選択してから、「**powersh**」と入力します。
 1. 結果リストで、 **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選択します。
 1. Windows PowerShell コマンド ウィンドウで、**LON-DC1** への永続的な接続を作成し、それを変数に格納します。 次のコマンドを入力して、Enter キーを押します。
 

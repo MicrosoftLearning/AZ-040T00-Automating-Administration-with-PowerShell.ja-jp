@@ -16,7 +16,7 @@ ms.locfileid: "132116703"
 
 ### <a name="task-1-use-string-variables"></a>タスク 1: 文字列変数を使用する
 
-1. **LON-CL1** で、 **[スタート]** を選択して、「**powersh**」と入力します。
+1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
 1. 結果の一覧で、 **[Windows PowerShell]** を右クリックするか、またはそのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
 1. `$logPath` 変数を設定するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
