@@ -16,7 +16,7 @@ ms.locfileid: "145180220"
 
 ### <a name="task-1-connect-to-azure-ad"></a>タスク 1: Azure AD に接続する
 
-1. **LON-CL1** で、 **[スタート]** を選択して、「**powersh**」と入力します。
+1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
 1. 結果の一覧で、 **[Windows PowerShell]** を右クリックするか、またはそのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
 1. **AzureAD** モジュールをインストールするには、 **[管理者: Windows PowerShell]** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -181,7 +181,7 @@ ms.locfileid: "145180220"
 
 ### <a name="task-1-connect-to-exchange-online"></a>タスク 1: Exchange Online に接続する
 
-1. **LON-CL1** で、 **[スタート]** を選択して、「**powersh**」と入力します。
+1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
 1. 結果の一覧で、 **[Windows PowerShell]** を右クリックするか、またはそのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
 1. **ExchangeOnlineManagement** モジュールをインストールするには、**管理者: Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
 
@@ -220,12 +220,12 @@ ms.locfileid: "145180220"
 ### <a name="task-3-verify-room-resource-booking"></a>タスク 3: 会議室のリソース予約を確認する
 
 1. **LON-CL1** のタスク バーで **[Microsoft Edge]** を選択します。
-1. Microsoft Edge のアドレス バーに、「 **https://outlook.office.com** 」と入力して、Enter キーを押します。
+1. Microsoft Edge のアドレス バーに、「**https://outlook.office.com**」と入力して、Enter キーを押します。
 1. Allan Woo としてサインインし、指示に従ってパスワードを変更します。 後の演習で思い出すことができるように、必ずパスワードをメモしてください。
 1. サインインしたままにするかどうかを尋ねられたら、「**いいえ**」を選択します。
 1. メニュー バーから **[カレンダー]** を選択して、 **[新しいイベント]** を選択します。
 1. **[タイトルの追加]** ボックスに、「**スタッフ会議**」 と入力します。
-1. **[出席者の招待]** ボックスに、「**BoardRoom**」と入力し、 **[BoardRoom]** を選択し、最初に使用可能な時刻を選択して、 **[送信]** を選択します。
+1. **[出席者の招待]** ボックスに、「**BoardRoom**」と入力し、**[BoardRoom]** を選択し、最初に使用可能な時刻を選択して、**[送信]** を選択します。
 1. メニューから **[メール]** を選択します。
 1. 会議出席依頼が受け入れられたという応答を、Allan が **BoardRoom** から受信していることを確認します。
 1. [Microsoft Edge] を閉じます。
@@ -354,7 +354,7 @@ ms.locfileid: "145180220"
 ## <a name="task-3-verify-access-to-the-team"></a>タスク 3: チームへのアクセスを確認する
 
 1. **LON-CL1** のタスク バーで **[Microsoft Edge]** を選択します。
-1. Microsoft Edge のアドレス バーに、「 **https://teams.microsoft.com** 」と入力して、Enter キーを押します。
+1. Microsoft Edge のアドレス バーに、「**https://teams.microsoft.com**」と入力して、Enter キーを押します。
 1. Allan Yoo としてサインインします。
 1. サインインしたままにするかどうかを尋ねられたら、「**いいえ**」を選択します。
 1. **[チームをまとめましょう]** ウィンドウを閉じて、**営業チーム** が一覧に表示されていることを確認します。
