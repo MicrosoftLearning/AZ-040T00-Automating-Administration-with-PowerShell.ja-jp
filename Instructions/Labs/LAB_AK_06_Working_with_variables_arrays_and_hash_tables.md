@@ -3,12 +3,12 @@ lab:
   title: 'ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する'
   type: Answer Key
   module: 'Module 6: Working with variables, arrays, and hash tables'
-ms.openlocfilehash: fd5e2ebdc893d890b6e88a1afdb4562e6e1155c9
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: f6d5b6dc325cac9039ee3d7447ca1634e2ec34a1
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116703"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824970"
 ---
 # <a name="lab-answer-key-using-variables-arrays-and-hash-tables-in-powershell"></a>ラボの回答キー: PowerShell で変数、配列、ハッシュ テーブルを使用する
 
@@ -42,7 +42,7 @@ ms.locfileid: "132116703"
     $logFile = "log.txt"
     ```
 
-1. `$logFile` 変数を `$logPath` 変数に追加するには、次のコマンドを入力し、Enter キーを押します。
+1. `$logPath` 変数に `$logFile` の変数を設定するには、次のコマンドを入力し、Enter キーを押します。
 
     ```powershell
     $logPath += $logFile
@@ -130,7 +130,7 @@ ms.locfileid: "132116703"
    $mktgUsers.count
    ```
 
-1. `$mktgUsers` の最初のユーザーを確認するには、次のコマンドを入力し、Enter キーを押します。
+1. `$mktgUsers` の最初のユーザーを確認するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    $mktgUsers[0]
@@ -202,7 +202,7 @@ ms.locfileid: "132116703"
 
 ### <a name="task-1-use-a-hash-table"></a>タスク 1: ハッシュ テーブルを使用する
 
-1. 名前とメールアドレスを含むハッシュ テーブルを作成するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. 名前とメール アドレスを含むハッシュ テーブルを作成するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $mailList=@{"Frank"="Frank@fabriakm.com";"Libby"="LHayward@contso.com";"Matej"="MSTaojanov@tailspintoys.com"}
@@ -214,13 +214,13 @@ ms.locfileid: "132116703"
    $mailList
    ```
 
-1. **Libby** のメールアドレスを確認するには、次のコマンドを入力し、Enter キーを押します。
+1. **Libby** のメール アドレスを確認するには、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $mailList.Libby
    ```
 
-1. **Libby** のメールアドレスを更新するには、次のコマンドを入力し、Enter キーを押します。
+1. **Libby** のメール アドレスを更新するには、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $mailList.Libby="Libby.Hayward@contoso.com"
@@ -238,7 +238,7 @@ ms.locfileid: "132116703"
    $mailList.Remove("Frank")
    ```
 
-1. $mailList ハッシュ テーブルの内容を確認するには、次のコマンドを入力し、Enter キーを押します。
+1. `$mailList` ハッシュ テーブルの内容を確認するには、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $mailList

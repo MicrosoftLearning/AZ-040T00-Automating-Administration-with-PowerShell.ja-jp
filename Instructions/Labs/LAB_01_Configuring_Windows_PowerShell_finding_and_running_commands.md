@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: Windows PowerShell の構成およびコマンドの検索と実行'
   module: 'Module 1: Getting Started with Windows PowerShell'
-ms.openlocfilehash: 7733e6f28997ecff848d4fbe569fcf2dc9c7cf83
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: fcf09d463080430d0f294b9f328d1f4700d6998f
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116729"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824959"
 ---
 # <a name="lab-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボ: Windows PowerShell の構成およびコマンドの検索と実行
 
@@ -26,7 +26,9 @@ ms.locfileid: "132116729"
 - Windows PowerShell コマンドを見つけて実行する。
 - Windows PowerShell のヘルプと概要のトピックを参照して、シェルの新しい概念と手法について学習する。
 
-## <a name="estimated-time-60-minutes"></a>予想所要時間: 60 分
+## <a name="estimated-time"></a>推定時間
+
+約 60 分
 
 ## <a name="lab-setup"></a>ラボのセットアップ
 
@@ -71,13 +73,13 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 
 ### <a name="task-3-start-a-shell-transcript"></a>タスク 3: シェル トランスクリプトを開始する
 
-1. Windows PowerShell コンソールで、次のコマンドを入力し、Enter キーを押します。
+1. **[Windows PowerShell]** コンソールで、次のコマンドを入力し、Enter キーを押します。
 
    ```ps
    Start-Transcript C:\DayOne.txt
    ```
 
-> **注:** これで、Windows PowerShell セッションのトランスクリプトが開始されました。 **Stop-Transcript** を実行するか、Windows PowerShell ウィンドウを閉じるまで、入力したすべてのコマンドとコマンド出力がテキスト ファイルに保存されます。 トランスクリプトの内容は、いつでも **C:\DayOne.txt** を開いて確認できます。
+> **注:** これで、Windows PowerShell セッションのトランスクリプトが開始されました。 **Stop-Transcript** を実行するか、 **[Windows PowerShell]** ウィンドウを閉じるまで、入力したすべてのコマンドとコマンド出力がテキスト ファイルに保存されます。 トランスクリプトの内容は、いつでも **C:\DayOne.txt** を開いて確認できます。
 
 ### <a name="exercise-1-results"></a>演習 1 の結果
 
@@ -92,13 +94,13 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 この演習の主なタスクは次のとおりです。
 
 1. 管理者として Windows PowerShell ISE アプリケーションを開く。
-1. 単一枠ビューを使用するように ISE の外観をカスタマイズし、 **[コマンド]** ウィンドウを非表示にし、フォント サイズを調整する。
+1. 単一枠ビューを使用するように ISE の外観をカスタマイズし、 **[コマンド]** ウィンドウを非表示にし、フォント サイズを調整します。
 
 ### <a name="task-1-open-the-windows-powershell-ise-application-as-administrator"></a>タスク 1: 管理者として Windows PowerShell ISE アプリケーションを開く
 
 1. タスクバーの **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューをアクティブ化し、**管理者** として **Windows PowerShell ISE** アプリケーションを開きます。
 
-### <a name="task-2-customize-the-ises-appearance-to-use-a-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: 単一枠ビューを使用するように ISE の外観をカスタマイズし、[コマンド] ウィンドウを非表示にし、フォント サイズを調整する
+### <a name="task-2-customize-the-appearance-of-the-ise-to-use-the-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: ISE の外観をカスタマイズし、単一枠ビュー、コマンド ペインの非表示、フォント サイズの調整を行う
 
 1. 単一枠ビューを使用し、コンソール ウィンドウを表示するように ISE を構成します。
 2. **[コマンド]** ウィンドウを非表示にします。

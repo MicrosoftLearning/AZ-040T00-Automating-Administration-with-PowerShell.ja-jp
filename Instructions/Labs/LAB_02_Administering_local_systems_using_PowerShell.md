@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: PowerShell を使用したローカル システム管理の実行'
   module: 'Module 2: Windows PowerShell for local systems administration'
-ms.openlocfilehash: 717c899152e99c75ac726822171023f20ed781c9
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: de91f6c2bef8e59e3198a0846423aed7cce8a0ea
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116715"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824957"
 ---
 # <a name="lab-performing-local-system-administration-with-powershell"></a>ラボ: PowerShell を使用したローカル システム管理の実行
 
@@ -21,7 +21,7 @@ ms.locfileid: "132116715"
 
 - Windows PowerShell を使用して Active Directory オブジェクトを作成して管理する。
 - Windows PowerShell を使用して、Windows Server でネットワーク設定を構成する。
-- Windows PowerShell を使用して IIS Web サイトを作成する。
+- Windows PowerShell を使用して、インターネット インフォメーション サービス (IIS) Web サイトを作成します。
 
 ## <a name="estimated-time-60-minutes"></a>予想所要時間: 60 分
 
@@ -99,8 +99,8 @@ ms.locfileid: "132116715"
 ### <a name="task-1-test-the-network-connection-and-review-the-configuration"></a>タスク 1: ネットワーク接続をテストし、構成を確認する
 
 1. **LON-SVR1** に切り替えます。
-2. 管理者特権で **Windows PowerShell** を開きます。
-3. **LON-DC1** への接続をテストし、テストの速度をメモします。
+2. 管理者特権で Windows PowerShell を開きます。
+3. **LON-DC1** への接続をテストし、応答の受信にかかる時間に注目します。
 4. **LON-SVR1** のネットワーク構成を確認します。
 5. IP アドレス、既定のゲートウェイ、DNS サーバーをメモします。
 
@@ -116,7 +116,7 @@ ms.locfileid: "132116715"
 ### <a name="task-4-verify-and-test-the-changes"></a>タスク 4: 変更を確認してテストする
 
 1. **LON-SVR1** で、ネットワーク構成への変更を確認します。
-2. **LON-DC1** への接続をテストし、テストの速度の違いをメモします。
+2. **LON-DC1** への接続をテストし、応答の受信にかかる時間の違いに注目します。
 
 ### <a name="exercise-2-results"></a>演習 2 の結果
 
@@ -150,7 +150,7 @@ ms.locfileid: "132116715"
     - 物理パス: 以前に作成したフォルダー
     - バインド情報: ポート **8080** を使用した **LON-SVR1** の現在の IP アドレス
 
-1. IP アドレスとポート **8080** を使用して Internet Explorer で Web サイトを開き、指定された設定がサイトで使用されていることを確認します。 Internet Explorer から、URL に対してドキュメントが構成されていないというエラー メッセージが表示されます。 エラー メッセージの詳細に、サイトの物理パスが表示されます。これは、**C:\\inetpub\\wwwroot\\london** であるはずです。
+1. IP アドレスとポート **8080** を使用して Internet Explorer で Web サイトを開き、指定された設定がサイトで使用されていることを確認します。 Internet Explorer から、URL に対してドキュメントが構成されていないというエラー メッセージが表示されます。 エラー メッセージの詳細に、サイトの物理パスが表示されます。これは、**C:\\inetpub\\wwwroot\\London** になります。
 
 ### <a name="exercise-3-results"></a>演習 3 の結果
 

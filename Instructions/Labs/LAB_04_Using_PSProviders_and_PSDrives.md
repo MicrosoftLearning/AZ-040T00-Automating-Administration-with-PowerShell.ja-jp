@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: PowerShell での PSProviders と PSDrives の使用'
   module: 'Module 4: Using PSProviders and PSDrives'
-ms.openlocfilehash: f35068f3687bfa8564cbf2dbe0ef2ee82bf3eab6
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 33cd4370eeb863407b52911a8ac45ed02e7d1ffd
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116708"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824956"
 ---
 # <a name="lab-using-psproviders-and-psdrives-with-powershell"></a>ラボ: PowerShell での PSProviders と PSDrives の使用
 
@@ -88,7 +88,7 @@ ms.locfileid: "132116708"
 1. **Windows PowerShell** コンソールで、コマンドを入力して、レジストリ キー **HKEY_CURRENT_USER\Software** に **Scripts** という名前のサブキーがないことを確認します。
 1. コンソールで、コマンドを実行して、**HKEY_CURRENT_USER\Software** に **Scripts** という名前のレジストリ キーを作成します。
 
-### <a name="task-2-create-a-new-registry-setting-to-store-the-name-of-the-psdrive"></a>タスク 2: PSDrive の名前を格納する新しいレジストリ設定を作成する
+### <a name="task-2-create-a-new-registry-value-to-store-the-name-of-the-psdrive"></a>タスク 2:PSDrive の名前を保存する新しいレジストリ値を作成する
 
 1. **Windows PowerShell** コンソールで、コマンドを実行して、現在の作業場所を、作成したレジストリ キーのパスに設定します。
 1. 次の構成で PSDrive 名を格納するレジストリ値を作成します。

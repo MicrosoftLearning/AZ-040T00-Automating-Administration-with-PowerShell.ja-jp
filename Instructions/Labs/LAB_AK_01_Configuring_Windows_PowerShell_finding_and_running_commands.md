@@ -1,16 +1,16 @@
 ---
 lab:
-  title: 'ラボ: Windows PowerShell の構成およびコマンドの検索と実行'
+  title: 'ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行'
   type: Answer Key
   module: 'Module 1: Getting Started with Windows PowerShell'
-ms.openlocfilehash: 7fbafd34f2836b39004834e68e625c8a0570f3a4
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 90cc9338919555b7e8372513acda3db04ec70604
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116742"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824962"
 ---
-# <a name="lab-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボ: Windows PowerShell の構成およびコマンドの検索と実行
+# <a name="lab-answer-key-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行
 
 ## <a name="exercise-1-configuring-the-windows-powershell-console-application"></a>演習 1: Windows PowerShell コンソール アプリケーションの構成
 
@@ -20,7 +20,7 @@ ms.locfileid: "132116742"
 1. 「**powershell**」と入力して、Windows PowerShell アイコンを表示します。 アイコン名が **Windows PowerShell (x86)** ではなく **Windows PowerShell** と表示されていることを確認します。
 1. **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選びます。
 1. ウィンドウのタイトル バーに **"管理者"** と表示され、 **"(x86)"** というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者が実行していることを示しています。
-1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで Windows PowerShell コンソールが開き、**管理者** によって実行され、今後もタスク バーで使用できるようになりました。
+1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで **Windows PowerShell コンソール** が開き、**管理者** によって実行され、今後もタスク バーで使用できるようになりました。
 
 ### <a name="task-2-configure-the-windows-powershell-console-application"></a>タスク 2: Windows PowerShell コンソール アプリケーションを構成する
 
@@ -48,7 +48,7 @@ ms.locfileid: "132116742"
 
 ### <a name="task-3-start-a-shell-transcript"></a>タスク 3: シェル トランスクリプトを開始する
 
-- Windows PowerShell コンソールで、次のコマンドを入力し、Enter キーを押します。
+- **Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Start-Transcript C:\DayOne.txt
@@ -64,7 +64,7 @@ ms.locfileid: "132116742"
 
 ### <a name="task-1-open-the-windows-powershell-ise-application-as-administrator"></a>タスク 1: 管理者として Windows PowerShell ISE アプリケーションを開く
 
-1. Windows PowerShell コンソールで「**ise**」と入力し、Enter キーを押します。
+1. **Windows PowerShell** コンソールで「**ise**」と入力して、Enter キーを押します。
 
    > **注:** ISE を開くこの方法は、管理者がコンソールを実行している場合にのみ正しく機能します。
 
@@ -72,13 +72,15 @@ ms.locfileid: "132116742"
 
 1. タスクバーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを起動して、 **[ISE を管理者として実行する]** を選びます。 これで、**管理者** として Windows PowerShell ISE が実行されます。
 
-### <a name="task-2-customize-the-appearance-of-the-ise-to-use-the-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: ISE の外観をカスタマイズし、単一枠ビュー、コマンド ペインの非表示、フォント サイズの調整を行う
+### <a name="task-2-customize-the-ises-appearance-to-use-a-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: 単一枠ビューを使用するように ISE の外観をカスタマイズし、[コマンド] ウィンドウを非表示にし、フォント サイズを調整する
 
 1. 単一枠ビューを使うように ISE を構成するには:
 
-    a. Windows PowerShell ISE ツール バーで **[スクリプト ウィンドウを最大表示]** オプションを選びます。
+    a. **Windows PowerShell ISE** ツール バーで **[スクリプト ウィンドウを最大表示]** オプションを選びます。
     
     b. **[スクリプト ウィンドウを非表示にします]** の上矢印アイコンを選び、コンソールを表示します。
+    
+    > **注:**  または、**Ctrl + R** キーの組み合わせを押します。
 
 1. **[コマンド]** ペインが表示されていない場合は、 **[コマンド アドオンを** **表示]** オプションを選んで表示します。
 
@@ -86,7 +88,7 @@ ms.locfileid: "132116742"
 
 1. ウィンドウの右下隅にあるスライダーを使って、快適な見え方になるまでフォント サイズを調整します。
 
-1. Windows PowerShell ISE と Windows PowerShell のウィンドウを閉じます。
+1. **Windows PowerShell ISE** と **Windows PowerShell** のウィンドウを閉じます。
 
 ### <a name="exercise-2-results"></a>演習 2 の結果
 
@@ -94,11 +96,11 @@ ms.locfileid: "132116742"
 
 ## <a name="exercise-3-finding-and-running-windows-powershell-commands"></a>演習 3: Windows PowerShell コマンドの検索と実行
 
-### <a name="task-1-find-commands-that-will-accomplish-specified-tasks"></a>タスク 1: 指定したタスクを実行するコマンドを見つける
+### <a name="task-1-find-commands-thatll-accomplish-specified-tasks"></a>タスク 1: 指定したタスクを実行するコマンドを見つける
 
 1. **LON-CL1** のタスク バーにある **Windows PowerShell** を右クリックし、 **[管理者として実行]** を選びます。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *resolve* 
@@ -118,7 +120,7 @@ ms.locfileid: "132116742"
 
    > **注:** 最初の 2 つのコマンドを使うと、名前のどこかに *Resolve* が使われているコマンドの一覧が表示されます。 3 つ目を使うと、名前の中に動詞 *Resolve* が使われているコマンドの一覧が表示されます。 このラボ環境では、この 3 つのコマンドから同じ結果が返されます。 これで **Resolve-DNSName** コマンドが見つかります。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *adapter* 
@@ -146,7 +148,7 @@ ms.locfileid: "132116742"
 
 1. **Get-Help Set-NetAdapter** を実行して、そのコマンドのヘルプを確認します。 これで、 *-MACAddress* パラメーターが見つかります。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *sched* 
@@ -164,9 +166,9 @@ ms.locfileid: "132116742"
    Get-Module *sched* -ListAvailable
    ```
 
-   > **注:** 最初の 2 つのコマンドを使うと、名前に *Sched* が使われているコマンドの一覧が表示されます。 3 つ目を使うと、名前に *Sched* を含むモジュールの一覧が表示されます。これで、モジュール **ScheduledTasks** が見つかります。 次にコマンド `Get-Command -Module \*ScheduledTask\*` を実行すると、そのモジュールのコマンドの一覧が表示されます。 これで **Enable-ScheduledTask** コマンドが見つかります。
+   > **注:** 最初の 2 つのコマンドを使うと、名前に *Sched* が使われているコマンドの一覧が表示されます。 3 つ目を使うと、名前に *Sched* を含むモジュールの一覧が表示されます。これで、モジュール **ScheduledTasks** が見つかります。 次にコマンド `Get-Command -Module *ScheduledTasks*` を実行すると、そのモジュールのコマンドの一覧が表示されます。 これで **Enable-ScheduledTask** コマンドが見つかります。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Command –Verb Block 
@@ -190,7 +192,7 @@ ms.locfileid: "132116742"
 
    *branch* というテキストを含むトピックの一覧が表示されますが、**BranchCache** キャッシュのクリアに関連するものはありません。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *cache* 
@@ -210,7 +212,7 @@ ms.locfileid: "132116742"
 
    > **注:** 最初の 2 つのコマンドを使うと、名前に *Cache* を含むコマンドの一覧が表示されます。 3 つ目を使うと、名前に動詞 *Clear* が使われているコマンドの一覧が表示されます。 いずれの方法でも、**Clear-BCCache** コマンドが見つかります。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *firewall*
@@ -260,7 +262,7 @@ ms.locfileid: "132116742"
 
    > **注:** 名前に動詞 *Suspend* が使われているコマンドの一覧が表示されます。 これで **Suspend-PrintJob** コマンドが見つかります。
 
-1. コンソールで次のいずれかのコマンドを入力し、Enter キーを押します。
+1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Alias Type
@@ -290,13 +292,13 @@ ms.locfileid: "132116742"
    Get-NetIPAddress –AddressFamily IPv4
    ```
 
-4. バックグラウンド インテリジェント転送サービス (BITS) のスタートアップの種類を設定するには、コンソールで次のコマンドを入力し、Enter キーを押します。
+4. バックグラウンド インテリジェント転送サービス (BITS) のスタートアップの種類を設定するには、コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Set-Service –Name BITS –StartupType Automatic 
    ```
 
-5. **LON-DC1** への接続をテストするには、コンソールで次のコマンドを入力し、Enter キーを押します。
+5. **LON-DC1** への接続をテストするには、コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Test-Connection –ComputerName LON-DC1 –Quiet
@@ -304,7 +306,7 @@ ms.locfileid: "132116742"
 
    > **注:** このコマンドからは True または False の値のみが返されます。他の出力は含まれません。
 
-6. Security イベント ログから最新の 10 エントリを表示するには、コンソールで次のコマンドを入力し、Enter キーを押します。
+6. Security イベント ログから最新の 10 エントリを表示するには、コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-EventLog –LogName Security –Newest 10 
@@ -320,7 +322,7 @@ ms.locfileid: "132116742"
 
 1. 前の演習で **Adatum\\Administrator** として **LON-CL1** にサインインしたままであることを確認します。
 
-1. ワイルドカード文字列の比較に使われる演算子を見つけるには、コンソールで次のコマンドを入力し、Enter キーを押します。
+1. ワイルドカード文字列の比較に使われる演算子を見つけるには、コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Get-Help *comparison*
@@ -338,7 +340,7 @@ ms.locfileid: "132116742"
 
 1. **about_Comparison_Operators** ファイルを確認すると、一般的な演算子では大文字と小文字が区別されないことがわかります。 **about_Comparison_Operators** で大文字と小文字を区別する特定の演算子が用意されています。
 
-1. **COMPUTERNAME** 環境変数を表示するには、コンソールで次のコマンドを入力し、Enter キーを押します。
+1. **COMPUTERNAME** 環境変数を表示するには、コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    $env:computername
@@ -358,8 +360,8 @@ ms.locfileid: "132116742"
    Get-Help about_signing 
    ```
 
-1. コード署名について説明します。 **makecert.exe** が自己署名デジタル証明書を作成するために使われることを学ぶ必要があります。
+1. コード署名について説明します。 **MakeCert.exe** が自己署名デジタル証明書を作成するために使われることを学ぶ必要があります。
 
 ### <a name="exercise-4-results"></a>演習 4 の結果
 
-この演習を完了すると、About ファイル内のヘルプ コンテンツを見つけられるようになります。
+この演習を完了すると、**About** ファイル内のヘルプ コンテンツを見つけられるようになります。

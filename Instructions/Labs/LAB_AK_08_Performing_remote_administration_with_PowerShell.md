@@ -3,12 +3,12 @@ lab:
   title: 'ラボ: PowerShell を使用したリモート管理の実行'
   type: Answer Key
   module: 'Module 8: Administering remote computers with Windows PowerShell'
-ms.openlocfilehash: f975899c5345c9e4279f26ca78eaafbb467572d2
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 6ad2b90cabf9f9e09bdb4b28e10a5724e750e935
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116730"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824952"
 ---
 # <a name="lab-answer-key-performing-remote-administration-with-powershell"></a>ラボの応答キー: PowerShell を使用したリモート管理の実行
 
@@ -33,7 +33,7 @@ ms.locfileid: "132116730"
 1. **LON-CL1** コンピューターで、次のコマンドを実行します。
 
    ```powershell
-   Enable-PSremoting
+   Enable-PSremoting -SkipNetworkProfileCheck
    ```
 
    プロンプトが表示されたら、 **[Y]** を選択してすべてのプロンプトに対して [はい] と答えます。これにより、リモート処理が有効になります。
@@ -56,10 +56,10 @@ ms.locfileid: "132116730"
 
 ## <a name="exercise-2-performing-one-to-one-remoting"></a>演習 2: 一対一のリモート処理の実行
 
-### <a name="task-1-connect-to-the-remote-computer-and-install-an-operating-system-feature"></a>タスク 1: リモート コンピューターに接続し、オペレーティング システム機能をインストールする
+### <a name="task-1-connect-to-the-remote-computer-and-install-an-operating-system-feature-on-it"></a>タスク 1: リモート コンピューターに接続し、オペレーティング システム機能をインストールする
 
 1. 引き続き、**Pa55w.rd** パスワードを使用して、**Adatum\\Administrator** として **LON-CL1** 仮想マシンにサインインしていることを確かめます。
-1. **LON-CL1** で、**LON-DC1** への一対一の接続を確立するには、Windows PowerShell で次のコマンドを入力してから、Enter キーを押します。
+1. **LON-CL1** で、**LON-DC1** への 1 対 1 の接続を確立するには、Windows PowerShell で次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Enter-PSSession –ComputerName LON-DC1
@@ -80,7 +80,7 @@ ms.locfileid: "132116730"
 
 ### <a name="task-2-test-multi-hop-remoting"></a>タスク 2: マルチホップ リモート処理をテストする
 
-1. **LON-DC1** への一対一のリモート処理接続を確立するには、次のコマンドを入力してから、Enter キーを押します。
+1. **LON-DC1** への 1 対 1 のリモート処理接続を確立するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Enter-PSSession –ComputerName LON-DC1
@@ -103,13 +103,13 @@ ms.locfileid: "132116730"
 ### <a name="task-3-observe-remoting-limitations"></a>タスク 3: リモート処理の制限事項を確認する
 
 1. パスワード **Pa55w.rd** を使用して、**Adatum\\Administrator** として **LON-CL1** 仮想マシンにサインインしていることを確かめます。
-1. **LON-CL1** への一対一の接続を確立するには、次のコマンドを入力してから、Enter キーを押します。
+1. **LON-CL1** への 1 対 1 の接続を確立するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Enter-PSSession –ComputerName localhost
    ```
 
-1. 次のコマンドを入力して、Enter キーを押します。
+1. 以下のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Notepad
@@ -159,7 +159,7 @@ ms.locfileid: "132116730"
    Get-Process | Get-Member
    ```
 
-1. リモートの Process オブジェクトのメンバーを確認するには、次のコマンドを入力してから、Enter キーを押します。
+1. リモート Process オブジェクトのメンバーを確認するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Invoke-Command –ComputerName LON-DC1 –ScriptBlock { Get-Process } | Get-Member
@@ -174,7 +174,7 @@ ms.locfileid: "132116730"
 1. **LON-CL1** で、パスワード **Pa55w.rd** を使用して **Adatum\\Administrator** としてサインインしていることを確かめます。
 1. Windows PowerShell ウィンドウが閉じている場合は、**[スタート]** メニューを選択してから、「**powersh**」と入力します。
 1. 結果リストで、 **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選択します。
-1. Windows PowerShell コマンド ウィンドウで、**LON-DC1** への永続的な接続を作成し、それを変数に格納します。 次のコマンドを入力して、Enter キーを押します。
+1. Windows PowerShell コマンド ウィンドウで、**LON-DC1** への永続的な接続を作成し、それを変数に格納します。 以下のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $dc = New-PSSession –ComputerName LON-DC1
@@ -202,7 +202,7 @@ ms.locfileid: "132116730"
    Get-Module –ListAvailable –PSSession $dc | Where { $_.Name –Like '*share*' }
    ```
 
-1. **LON-DC1** からローカル コンピューターにモジュールをインポートし、重要なコマンドの名詞にプレフィックス **DC** を追加するには、次のコマンドを入力してから、Enter キーを押します。
+1. **LON-DC1** からお使いのローカル コンピューターにモジュールをインポートし、重要なコマンドの名詞にプレフィックス **DC** を追加するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Import-Module –PSSession $dc –Name SMBShare –Prefix DC
@@ -216,7 +216,7 @@ ms.locfileid: "132116730"
 
    > **注:** このコマンドは **LON-DC1** で暗黙的に実行されるため、コマンドではそのコンピューター上の共有が表示されます。
 
-1. ローカル コンピューターの共有のリストを表示するには、次のコマンドを入力してから、Enter キーを押します。
+1. ローカル コンピューター上の共有のリストを表示するには、次のコマンドを入力してから、Enter キーを押します。
 
    ```powershell
    Get-SMBShare
@@ -292,6 +292,8 @@ ms.locfileid: "132116730"
    ```
 
    > **注:** ヘルプが正しく表示されない場合は、Windows PowerShell ISE ではなく、管理者として Windows PowerShell コマンド ウィンドウで、手順 1 から 3 のコマンドを実行します。
+
+1. **[Get-NetFirewallRule ヘルプ]** ウィンドウを閉じます。
 
 1. **LON-DC1** と **LON-CL1** で有効になっているファイアウォール規則のリストを表示するには、次のコマンドを入力してから、Enter キーを押します。
 

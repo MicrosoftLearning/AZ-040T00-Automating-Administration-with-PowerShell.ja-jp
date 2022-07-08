@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: WMI と CIM を使って情報についてのクエリを実行する'
   module: 'Module 5: Querying management information by using CIM and WMI'
-ms.openlocfilehash: 29a429a264ef6b6b61ca69ce9a3ca90644e89f32
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: e32bb5ff582e809e039a15af7a47cbb4b60018c9
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116732"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824954"
 ---
 # <a name="lab-querying-information-by-using-wmi-and-cim"></a>ラボ: WMI と CIM を使って情報についてのクエリを実行する
 
@@ -97,8 +97,7 @@ ms.locfileid: "132116732"
 
 ### <a name="task-2-query-bios-information"></a>タスク 2: BIOS 情報のクエリを実行する
 
-1. キーワード **bios** と CIM コマンドを使用して、BIOS 情報を含むリポジトリ クラスを検索します。
-   
+1. キーワード **bios** と CIM コマンドを使用して、BIOS 情報を含むリポジトリ クラスを検索します。 
 1. CIM コマンドと、前の手順で検出したクラスを使用して、使用可能なすべての BIOS 情報の一覧を表示します。
 
 ### <a name="task-3-query-network-adapter-configuration-information"></a>タスク 3: ネットワーク アダプターの構成情報のクエリを実行する
@@ -109,7 +108,6 @@ ms.locfileid: "132116732"
 ### <a name="task-4-query-user-group-information"></a>タスク 4: ユーザー グループ情報のクエリを実行する
 
 1. CIM コマンドとキーワード **group** を使用して、ユーザー グループを一覧表示するクラスを検索します。
-
 1. CIM コマンドを使用して、**LON-DC1** に存在するユーザー グループの一覧を表示します。
 
 ## <a name="exercise-3-invoking-methods"></a>演習 3: メソッドの呼び出し
