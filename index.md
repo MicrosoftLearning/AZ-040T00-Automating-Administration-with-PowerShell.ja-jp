@@ -1,5 +1,5 @@
 ---
-title: オンラインでホストされる手順
+title: オンライン ホステッド インストラクション
 permalink: index.html
 layout: home
 ms.openlocfilehash: f4e2e1489e1997cfd064aa74eb5345e302bb2424
@@ -18,7 +18,7 @@ ms.locfileid: "132161106"
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | モジュール | ラボ |
 | --- | --- | 
-ラボ %} でのアクティビティの {%| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
+{% for activity in labs %}| {{ activity.lab.module }} | [{{ activity.lab.title }}{% if activity.lab.type %} - {{ activity.lab.type }}{% endif %}]({{ site.github.url }}{{ activity.url }}) |
 {% endfor %}
 
 ## <a name="demos"></a>デモ

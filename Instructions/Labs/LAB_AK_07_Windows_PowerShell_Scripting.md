@@ -3,20 +3,20 @@ lab:
   title: 'ラボ: PowerShell でのスクリプトの使用'
   type: Answer Key
   module: 'Module 4: Windows PowerShell scripting'
-ms.openlocfilehash: 68da74b22003a243fc1567c2bb07aec4b74d0346
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 1ebd7589c01be5cc0f8927effcf888b9e4151f49
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116744"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824953"
 ---
 # <a name="lab-answer-key-using-scripts-with-powershell"></a>ラボの応答キー: PowerShell でのスクリプトの使用
 
 ## <a name="exercise-1-signing-a-script"></a>演習 1: スクリプトへの署名
 
-### <a name="task-1-create-a-code-signing-certificate"></a>タスク 1: コード署名証明書を作成する
+### <a name="task-1-install-a-code-signing-certificate"></a>タスク 1: コード署名証明書をインストールする
 
-1. **LON-CL1** で **[スタート]** を選び、「**mmc.exe**」と入力し、**mmc.exe** を選びます。
+1. **LON-CL1** で **[スタート]** を選び、「**mmc.exe**」と入力し、"**mmc.exe**" を選びます。
 1. **MMC** コンソールで **[ファイル]** を選び、 **[スナップインの追加と削除]** を選びます。
 1. **[スナップインの追加と削除]** ウィンドウで **[証明書]** を選び、 **[追加]** を選びます。
 1. **[証明書スナップイン]** ダイアログ ボックスで **[ユーザー アカウント]** を選択し、 **[完了]** をクリックします。
@@ -32,32 +32,32 @@ ms.locfileid: "132116744"
 
 ### <a name="task-2-digitally-sign-a-script"></a>タスク 2: スクリプトにデジタル署名する
 
-1. **[スタート]** ボタンを選び、「**Powersh**」と入力し、**Windows PowerShell** を選びます。
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. **[スタート]** ボタンを選び、「**Powersh**」と入力し、**[Windows PowerShell]** を選びます。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-ChildItem Cert:\CurrentUser\My\ -CodeSigningCert
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    $cert = Get-ChildItem Cert:\CurrentUser\My\ -CodeSigningCert
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Set-Location E:\Mod07\Labfiles
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Rename-Item HelloWorld.txt HelloWorld.ps1
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Set-AuthenticodeSignature -FilePath HelloWorld.ps1 -Certificate $cert
@@ -65,19 +65,19 @@ ms.locfileid: "132116744"
 
 ### <a name="task-3-set-the-execution-policy"></a>タスク 3: 実行ポリシーを設定する
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。 プロンプトで「**Y**」と入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。 プロンプトで「**Y**」と入力し、Enter キーを押します。
 
    ```powershell
    Set-ExecutionPolicy AllSigned
    ```
 
-2. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。 信頼されていない発行元のソフトウェアを実行するかどうかを尋ねられることがあります。 「**A**」と入力し、Enter キーを押します。
+2. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。 信頼されていない発行元のソフトウェアを実行するかどうかを尋ねられることがあります。 「**A**」と入力して、Enter キーを押します。
 
    ```powershell
    .\HelloWorld.ps1
    ```
 
-3. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。 プロンプトで「**Y**」と入力し、Enter キーを押します。
+3. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。 プロンプトで「**Y**」と入力し、Enter キーを押します。
 
    ```powershell
    Set-ExecutionPolicy Unrestricted
@@ -89,21 +89,21 @@ ms.locfileid: "132116744"
 
 ### <a name="task-1-create-a-test-group"></a>タスク 1: テスト グループを作成する
 
-1. **LON-CL1** で **[スタート]** を選び、「**Powersh**」と入力し、**Windows PowerShell** を選びます。
+1. **LON-CL1** で **[スタート]** を選び、「**Powersh**」と入力し、**[Windows PowerShell]** を選びます。
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    New-ADGroup -Name IPPhoneTest -GroupScope Universal -GroupCategory Security
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Move-ADObject "CN=IPPhoneTest,CN=Users,DC=Adatum,DC=com" -TargetPath "OU=IT,DC=Adatum,DC=com"
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Add-ADGroupMember IPPhoneTest -Members Abbi,Ida,Parsa,Tonia
@@ -117,26 +117,26 @@ ms.locfileid: "132116744"
 
 ### <a name="task-1-create-servicestxt-with-service-names"></a>タスク 1: サービス名を含む services.txt を作成する
 
-1. **[スタート]** を選び、「**powersh**」と入力し、**Windows PowerShell** を選びます。
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. **[スタート]** を選び、「**powersh**」と入力し、**[Windows PowerShell]** を選びます。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Set-Location E:\Mod07\Labfiles
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    New-Item services.txt -ItemType File
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-Service "Print Spooler" | Select -ExpandProperty Name | Out-File services.txt -Append
    ```
 
-1. Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
+1. [Windows PowerShell] プロンプトで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-Service "Windows Time" | Select -ExpandProperty Name | Out-File services.txt -Append

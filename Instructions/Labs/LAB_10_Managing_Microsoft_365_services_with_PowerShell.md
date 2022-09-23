@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: PowerShell を使用した Microsoft 365 の管理'
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
-ms.openlocfilehash: 792b650e5200594445761a88266012243eefe009
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: 15571fd913e80e2c72c66f5eda1fa46cd88ecc68
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116713"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824955"
 ---
 # <a name="lab-managing-microsoft-365-with-powershell"></a>ラボ: PowerShell を使用した Microsoft 365 の管理
 
@@ -34,7 +34,7 @@ ms.locfileid: "132116713"
 
 パスワード: **Pa55w.rd**
 
-このラボでは、提供されている仮想マシン環境を使用します。 ラボを開始する前に、次の手順を完了します。
+このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
 
 1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って **Adatum\\Administrator** としてサインインします。
 1. **LON-CL1** について手順 1 を繰り返します。
@@ -57,26 +57,27 @@ ms.locfileid: "132116713"
 
 1. **LON-CL1** で、管理者として Windows PowerShell を開きます。
 1. Azure AD を管理できるようにするモジュールをインストールします。
-1. Azure AD に接続し、管理者ユーザーとしてサインインします。
+1. Azure AD に接続し、管理者ユーザー アカウントを使用してサインインします。
 1. 接続されていることを確認するには、Azure AD 内のユーザーの一覧を確認します。
 
 ### <a name="task-2-create-a-new-administrative-user"></a>タスク 2: 新しい管理ユーザーを作成する
 
 1. 変数に新しい **PasswordProfile** オブジェクトを作成し、**password** プロパティを設定します。
 1. 忘れないようにパスワードをメモします。
-1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザーを作成します。
+1. 検証済みの Azure AD ドメインの名前を識別し、$verifiedDomain という名前の変数にそれを保存します。
+1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
    - 表示名: **Noreen Riggs**
-   - ユーザー プリンシパル名: **Noreen@yourdomain.onmicrosoft.com**
+   - ユーザー プリンシパル名:**Noreen@$verifiedDomain**
    - アカウントが有効
    - MailNickName: **Noreen**
-1. **Noreen Riggs** をグローバル管理者ロールに追加します。
-1. **Get-AzureADDirectoryRoleMember** コマンドレットを使用して、**Noreen Riggs** がグローバル管理者ロールに含まれていることを確認します。
+1. グローバル管理者ロールを **Noreen Riggs** ユーザー アカウントに割り当てます。
+1. **Get-AzureADDirectoryRoleMember** コマンドレットを使用して、グローバル管理者ロールが **Noreen Riggs** ユーザー アカウントに割り当てられていることを確認します。
 
-### <a name="task-3-create-and-license-a-new-user"></a>タスク 3: 新しいユーザーを作成してライセンスを付与する
+### <a name="task-3-create-and-license-a-new-user"></a>タスク 3: 新しいユーザーを作成してライセンスを取得する
 
-1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザーを作成します。
+1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
    - 表示名: **Allan Yoo**
-   - ユーザー プリンシパル名: **Allan@yourdomain.onmicrosoft.com**
+   - ユーザー プリンシパル名:**Allan@$verifiedDomain**
    - アカウントが有効
    - MailNickName: **Allan**
 1. Allan Yoo の利用場所を **[US]** に設定します。
@@ -88,13 +89,14 @@ ms.locfileid: "132116713"
 ### <a name="task-4-create-and-populate-a-group"></a>タスク 4: グループを作成して設定する
 
 1. Azure AD 内のグループを一覧表示します。
-2. 次の属性を使用して、Azure AD に新しいグループを作成します。
+1. 次の属性を使用して、Azure AD に新しいグループ オブジェクトを作成します。
    - 表示名: **Sales Security Group**
    - セキュリティが有効: `$true`
    - メールが有効: `$false`
    - メール ニックネーム: **SalesSecurityGroup**
-3. Allan Yoo を Sales Security Group のメンバーとして追加します。
-4. Sales Security Group メンバーシップに対してクエリを実行し、Allan Yoo がメンバーであることを確認します。
+1. Allan Yoo のユーザー オブジェクトを Sales Security Group のメンバーとして追加します。
+1. Sales Security Group メンバーシップに対してクエリを実行し、Allan Yoo のユーザー オブジェクトがそのメンバーであることを確認します。
+1. **[Windows PowerShell]** ウィンドウは開いたままにしておきます。
 
 ## <a name="exercise-2-managing-exchange-online"></a>演習 2: Exchange Online の管理
 
@@ -110,9 +112,8 @@ ms.locfileid: "132116713"
 
 ### <a name="task-1-connect-to-exchange-online"></a>タスク 1: Exchange Online に接続する
 
-1. **LON-CL1** で、管理者として Windows PowerShell を開きます。
-1. Exchange Online を管理できるようにするモジュールをインストールします。
-1. Exchange Online に接続し、管理者ユーザーとしてサインインします。
+1. **LON-CL1** で、同じ **[Windows PowerShell]** ウィンドウに、Exchange Online を管理できるモジュールをインストールします。
+1. Exchange Online に接続し、管理者ユーザー アカウントを使用してサインインします。
 1. 接続されていることを確認するには、Exchange Online 内のメールボックスの一覧を確認します。
 
 ### <a name="task-2-create-a-room-mailbox"></a>タスク 2: 会議室メールボックスを作成する
@@ -123,7 +124,7 @@ ms.locfileid: "132116713"
 ### <a name="task-3-verify-room-resource-booking"></a>タスク 3: 会議室のリソース予約を確認する
 
 1. Microsoft Edge ブラウザーを開き、 **https://outlook.office.com** に移動します。
-2. **Allan Woo** としてサインインします。
+2. **Allan Yoo** としてサインインします。
 3. 予定表から、新しいイベントを作成し、出席者として **BoardRoom** を含めます。
 4. 使用可能な時間を選択し、会議の招待状を送信します。
 5. Outlook 受信トレイで、会議要求が受理されたという応答を受信したことを確認します。
@@ -139,8 +140,7 @@ SharePoint Online の管理に使用される Web ベースの管理コンソー
 
 ### <a name="task-1-connect-to-sharepoint-online"></a>タスク 1: SharePoint Online に接続する
 
-1. キャッシュされた資格情報をクリアするには、**Windows PowerShell** コンソールを閉じ、管理者として Windows PowerShell を開きます。
-1. **Windows PowerShell** コンソールで、SharePoint Online を管理できるようにするモジュールをインストールします。
+1. **LON-CL1** で、同じ **[Windows PowerShell]** ウィンドウに、SharePoint Online を管理できるモジュールをインストールします。
 1. SharePoint Online に接続し、**Noreen Riggs** としてサインインします。
 1. 接続を確認するには、テナント内のサイトを一覧表示します。
 
@@ -154,13 +154,11 @@ SharePoint Online の管理に使用される Web ベースの管理コンソー
    - ストレージ クォータ: **256**
    - テンプレート: **EHS#1**
 
-   > **注:** コマンドの処理が完了するまで数分かかる場合があります。
+   > **注:** サイトの作成には 10 分以上かかる場合があります。 **-NoWait** パラメーターを使用して、サイトを非同期的に作成します。 
 
 1. **Get-SPOSite** を使用して、新しいサイトの状態を確認します。
-
-   > **注:** サイトの作成には、10 分以上かかる場合があります。
-
 1. SharePoint Online から切断します。
+1. **[Windows PowerShell]** ウィンドウは開いたままにしておきます。
 
 ## <a name="exercise-4-managing-microsoft-teams"></a>演習 4: Microsoft Teams の管理
 
@@ -174,8 +172,8 @@ SharePoint Online の管理に使用される Web ベースの管理コンソー
 
 ### <a name="task-1-connect-to-microsoft-teams"></a>タスク 1: Microsoft Teams に接続する
 
-1. **Windows PowerShell** コンソールで、Microsoft Teams を管理できるようにするモジュールをインストールします。
-1. Microsoft Teams に接続し、管理ユーザーとしてサインインします。
+1. **LON-CL1** で、同じ **[Windows PowerShell]** ウィンドウに、Microsoft Teams を管理できるモジュールをインストールします。
+1. Microsoft Teams に接続し、管理者ユーザー アカウントを使用してサインインします。
 1. 接続を確認するには、テナント内のサイトを一覧表示します。
 1. **Get-Team** コマンドレットを使用して、既存のチームがないことを確認します。
 

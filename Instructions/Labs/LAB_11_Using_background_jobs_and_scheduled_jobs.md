@@ -2,12 +2,12 @@
 lab:
   title: 'ラボ: PowerShell を使用したジョブ管理'
   module: 'Module 11: Using background jobs and scheduled jobs'
-ms.openlocfilehash: 8383e48f8043717452c6d8c847ee296e18837f53
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
+ms.openlocfilehash: d5d4d4fd1a3d668446f64d4c40cc6981f435f932
+ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116712"
+ms.lasthandoff: 07/02/2022
+ms.locfileid: "146824973"
 ---
 # <a name="lab-jobs-management-with-powershell"></a>ラボ: PowerShell を使用したジョブ管理
 
@@ -36,7 +36,7 @@ ms.locfileid: "132116712"
 
 このラボでは、提供されている仮想マシン (VM) 環境を使用します。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開いて、**Adatum\\Administrator** として、パスワード **Pa55w.rd** を使用してサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使用して **Adatum\\Administrator** としてサインインします。
 1. **LON-SVR1** および **LON-CL1** に対して手順 1 を繰り返し行います。
 
 ## <a name="exercise-1-starting-and-managing-jobs"></a>演習 1: ジョブの開始と管理
@@ -47,21 +47,23 @@ ms.locfileid: "132116712"
 
 この演習の主なタスクは次のとおりです。
 
-1. Windows PowerShell ジョブを開始します。
+1. Windows PowerShell リモート ジョブを開始する
 1. ローカル ジョブを開始します。
 1. ジョブの状態を確認および管理します。
 
-### <a name="task-1-start-a-windows-powershell-job"></a>タスク 1: Windows PowerShell ジョブを開始する
+### <a name="task-1-start-a-windows-powershell-remote-job"></a>タスク 1: Windows PowerShell リモート ジョブを開始する
 
 1. **LON-CL1** に **Adatum\\Administrator** として、パスワード **Pa55w.rd** を使用して確実にサインインします。
 1. 物理ネットワーク アダプターの一覧を **LON-DC1** および **LON-SVR1** から取得する Windows PowerShell リモート処理ジョブを開始します。 ジョブに **RemoteNetAdapt** という名前を付けます。
 1. サーバー メッセージ ブロック (SMB) の一覧を **LON-DC1** および **LON-SVR1** から取得する Windows PowerShell リモート処理ジョブを開始します。 ジョブに **RemoteShares** という名前を付けます。
-1. **Win32_Volume** Common Information Model (CIM) クラスのすべてのインスタンスを、Active Directory ドメイン サービス (AD DS) 内のすべてのコンピューターから取得する Windows PowerShell リモート処理ジョブを開始します。 ジョブに **RemoteDisks** という名前を付けます。 一部のドメイン コンピューターは起動しない可能性があるため、一部の子ジョブは失敗する可能性があります。
+1. LON-CL1 で PowerShell リモート処理を有効にして、**Win32_Volume** Common Information Model (CIM) クラスのすべてのインスタンスを、Active Directory Domain Services (AD DS) 内のすべてのコンピューターから取得する Windows PowerShell リモート ジョブを開始します。 ジョブに **RemoteDisks** という名前を付けます。 一部のドメイン コンピューターは起動しない可能性があるため、一部の子ジョブは失敗する可能性があります。
+
+> **注:**  PowerShell リモート処理を使用して接続するには、LON-CL1 で PowerShell リモート処理を有効にする必要があります。Windows 10 では既定で無効になっています。 **RemoteDisk** は、LON-CL1 を含むすべてのドメイン コンピューターを対象とします。
 
 ### <a name="task-2-start-a-local-job"></a>タスク 2: ローカル ジョブを開始する
 
 1. すべてのエントリを **セキュリティ** イベント ログから取得するローカル ジョブを開始します。 ジョブに **LocalSecurity** という名前を付けます。
-1. 範囲演算子 ( **..** ) と **ForEach-Object** を使用して、ドライブ C の 100 個のディレクトリ一覧 (サブフォルダーを含む) を生成するローカル ジョブを開始します。 ジョブに **LocalDir** という名前を付けます。 このジョブがまだ実行されている間に、次のタスクに進みます。
+1. 範囲演算子 ( **..** ) と **ForEach-Object** を使用して、ドライブ **C** の 100 個のディレクトリ一覧 (サブフォルダーを含む) を生成するローカル ジョブを開始します。 ジョブに **LocalDir** という名前を付けます。 このジョブがまだ実行されている間に、次のタスクに進みます。
 
 ### <a name="task-3-review-and-manage-job-status"></a>タスク 3: ジョブの状態を確認して管理する
 
@@ -105,7 +107,6 @@ ms.locfileid: "132116712"
 
     - ジョブ アクションによって、**セキュリティ** イベント ログからすべてのエントリが取得されます。
     - ジョブ名は **LocalSecurityLog** です。
-    - ジョブの結果の最大数は 5 です。
 
 1. スケジュールされたジョブ **LocalSecurityLog** のジョブ トリガーの一覧 (時刻を含む) を表示します。
 1. 手順 2 で表示された時間が経過するまで待ちます。
@@ -116,15 +117,16 @@ ms.locfileid: "132116712"
 
 1. **LON-DC1** 上で、 **[Active Directory ユーザーとコンピューター]** を開きます。
 1. **[Active Directory ユーザーとコンピューター]** の **[Managers]** 組織単位 (OU) からユーザーを選択し、そのユーザー アカウントを無効にします
+1. 無効化されたユーザー アカウントが **Managers** セキュリティ グループのメンバーであることを確認します。
 1. [**タスク スケジューラ**] を開きます。
 1. 次のプロパティを使用して新しいタスクを作成します。
 
-    - 名前と説明: **Managers セキュリティ グループから、無効にされたユーザーを削除する**
-    - セキュリティ オプション: **[ユーザーがログオンしているかどうかにかかわらず実行する]** と **[最高の特権で実行する]**
-    - トリガー設定: **[毎日]** 。時刻は現在の時刻の 5 分後に設定します
+    - 名前と説明:「**Managers セキュリティ グループから、無効にされたユーザーを削除する**」と入力します
+    - セキュリティ オプション: **[ユーザーがログオンしているかどうかにかかわらず実行する]** と **[最高の特権で実行する]** と指定します
+    - トリガーの設定: **[毎日]** を指定し、時刻は現在の時刻の 5 分後に設定します
     - アクション: **プログラムまたはスクリプト** を **PowerShell.exe** に設定します
-    - 引数の追加 (省略可能): 「 **-ExecutionPolicy Bypass E:\\Labfiles\\Mod11\\DeleteDisabledUserManagersGroup.ps1**」と入力します
+    - 引数の追加 (省略可能): 「**-ExecutionPolicy Bypass E:\\Labfiles\\Mod11\\DeleteDisabledUserManagersGroup.ps1**」と入力します
     - 設定: **[タスクが既に実行中の場合に適用される規則]** を **[既存のインスタンスの停止]** に設定します
 
-1. 5 分後に、タスク **Managers セキュリティ グループから、無効にされたユーザーを削除する** の履歴を確認します。
-1. **[Active Directory ユーザーとコンピューター]** に戻り、手順 2 で無効にしたユーザー アカウントが **Managers** セキュリティ グループのメンバーではなくなったことを確認します。
+1. 5 分後に、"**Managers セキュリティ グループから、無効にされたユーザーを削除する**" タスクの履歴を確認します。
+1. **[Active Directory ユーザーとコンピューター]** に戻り、無効にしたユーザー アカウントが **Managers** セキュリティ グループのメンバーではなくなったことを確認します。
