@@ -1,15 +1,10 @@
 ---
 lab:
-  title: ラボ A:PowerShell パイプラインの使用
+  title: 'ラボ A:PowerShell パイプラインの使用'
   type: Answer Key
   module: 'Module 3: Working with the Windows PowerShell pipeline'
-ms.openlocfilehash: fb9496ee6b5b1ec2255c2da138c69aefdbc6c98f
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146825143"
 ---
+
 # <a name="lab-answer-key-using-powershell-pipeline"></a>ラボの回答キー:PowerShell パイプラインの使用
 
 ## <a name="exercise-1-selecting-sorting-and-displaying-data"></a>演習 1: データの選択、並べ替え、および表示
@@ -212,7 +207,7 @@ ms.locfileid: "146825143"
       Get-DnsClientCache | Select Name,Type,TimeToLive | Sort Name | Format-List
       ```
 
-      > **注:** **型** データからは、期待した内容 (A や CNAME など) が返されないことに注目してください。 代わりに、生の数値データが返されます。 各数値はレコードの型に直接マップされます。マップ (1= A、5 = CNAME など) がわかっている場合は、それらの型をフィルター処理できます。 このモジュールの後半では、さらにフィルターを追加して、数値とそれに対応するレコードの型を決定する方法について学習します。 **状態** データなど、他の返されるデータでも同じような状況になることがわかります。
+      > **注:** **型**データからは、期待した内容 (A や CNAME など) が返されないことに注目してください。 代わりに、生の数値データが返されます。 各数値はレコードの型に直接マップされます。マップ (1= A、5 = CNAME など) がわかっている場合は、それらの型をフィルター処理できます。 このモジュールの後半では、さらにフィルターを追加して、数値とそれに対応するレコードの型を決定する方法について学習します。 **状態**データなど、他の返されるデータでも同じような状況になることがわかります。
 
 1. 開いているすべてのウィンドウを閉じます。
 

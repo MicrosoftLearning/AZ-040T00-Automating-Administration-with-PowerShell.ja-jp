@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ B:PowerShell パイプラインの使用
+  title: 'ラボ B:PowerShell パイプラインの使用'
   module: 'Module 3: Working with the Windows PowerShell pipeline'
-ms.openlocfilehash: ed542a4e512d40b51aa07bc431072a362e10cfd2
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146825147"
 ---
+
 # <a name="lab-using-powershell-pipeline"></a>ラボ: PowerShell パイプラインの使用
 
 ## <a name="scenario"></a>シナリオ
@@ -69,7 +64,7 @@ Adatum Corporation の管理タスクの 1 つは、高度な PowerShell スク�
 
 ### <a name="task-3-run-a-method-of-a-windows-management-instrumentation-wmi-object"></a>タスク 3: Windows Management Instrumentation (WMI) オブジェクトのメソッドを実行する
 
-1. **Windows PowerShell コンソール** 以外のすべてのアプリケーションを閉じます。
+1. **Windows PowerShell コンソール**以外のすべてのアプリケーションを閉じます。
 1. コマンド **Get-WmiObject -Class Win32_OperatingSystem -EnableAllPrivileges** を実行します。
 1. 前のコマンドで生成されたオブジェクトのメンバーを表示します。
 1. メンバーのリストで、コンピューターを再起動するメソッドを検索します。

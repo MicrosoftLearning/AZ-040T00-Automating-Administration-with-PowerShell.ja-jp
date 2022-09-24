@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell を使用した Microsoft 365 の管理'
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
-ms.openlocfilehash: 15571fd913e80e2c72c66f5eda1fa46cd88ecc68
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824955"
 ---
+
 # <a name="lab-managing-microsoft-365-with-powershell"></a>ラボ: PowerShell を使用した Microsoft 365 の管理
 
 ## <a name="scenario"></a>シナリオ
@@ -36,7 +31,7 @@ ms.locfileid: "146824955"
 
 このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って **Adatum\\Administrator** としてサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
 1. **LON-CL1** について手順 1 を繰り返します。
 
 > **注**: このラボでは、Office 365 テナントと、そのテナントでグローバル管理者のアクセス許可を持つユーザーが必要です。

@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell を使用したローカル システム管理の実行'
   module: 'Module 2: Windows PowerShell for local systems administration'
-ms.openlocfilehash: de91f6c2bef8e59e3198a0846423aed7cce8a0ea
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824957"
 ---
+
 # <a name="lab-performing-local-system-administration-with-powershell"></a>ラボ: PowerShell を使用したローカル システム管理の実行
 
 ## <a name="scenario"></a>シナリオ

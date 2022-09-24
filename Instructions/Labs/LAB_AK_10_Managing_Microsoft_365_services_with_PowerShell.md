@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell を使用した Microsoft 365 の管理'
   type: Answer Key
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
-ms.openlocfilehash: f897f6a1dce6c8b17f3f175a6ab58a228f8e6269
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824944"
 ---
+
 # <a name="lab-answer-key-managing-microsoft-365-with-powershell"></a>ラボの回答キー: PowerShell を使用した Microsoft 365 の管理
 
 ## <a name="exercise-1-managing-users-and-groups-in-azure-ad"></a>演習 1: Azure AD でのユーザーとグループの管理
@@ -349,6 +344,6 @@ ms.locfileid: "146824944"
 1. Microsoft Edge のアドレス バーに、「 **https://teams.microsoft.com** 」と入力して、Enter キーを押します。
 1. ユーザー名として UserPrincipalName を使用し、このラボで前に変更したパスワードを指定して、Allan Yoo としてサインインします。 
 1. サインインしたままにするかどうかを尋ねられたら、**[いいえ]** を選択します。
-1. **[チームをまとめましょう]** ウィンドウを閉じて、**営業チーム** が一覧に表示されていることを確認します。
+1. **[チームをまとめましょう]** ウィンドウを閉じて、**営業チーム**が一覧に表示されていることを確認します。
 1. **[新しい会話]** を選択し、「**価格は月末に 10% 増加します**」と入力し、Enter キーを押します。
 1. [Microsoft Edge] を閉じます。

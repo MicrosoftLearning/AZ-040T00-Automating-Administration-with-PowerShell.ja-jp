@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell を使用したリモート管理の実行'
   module: 'Module 8: Administering remote computers with Windows PowerShell'
-ms.openlocfilehash: 692d89c683207781e9ee4ca4e64316b500a46d4f
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116701"
 ---
+
 # <a name="lab-performing-remote-administration-with-powershell"></a>ラボ: PowerShell を使用したリモート管理の実行
 
 ## <a name="scenario"></a>シナリオ

@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell を使用したリモート管理の実行'
   type: Answer Key
   module: 'Module 8: Administering remote computers with Windows PowerShell'
-ms.openlocfilehash: 6ad2b90cabf9f9e09bdb4b28e10a5724e750e935
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824952"
 ---
+
 # <a name="lab-answer-key-performing-remote-administration-with-powershell"></a>ラボの応答キー: PowerShell を使用したリモート管理の実行
 
 ## <a name="exercise-1-enabling-remoting-on-the-local-computer"></a>演習 1: ローカル コンピューターでリモート処理を有効にする

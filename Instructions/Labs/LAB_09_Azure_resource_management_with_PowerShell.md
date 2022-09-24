@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell を使用した Azure リソース管理'
   module: 'Module 9: Managing Azure resources with PowerShell'
-ms.openlocfilehash: c2b21bf0c29c091c47cf40002a0e65ab87ea9c38
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824972"
 ---
+
 # <a name="lab-azure-resource-management-with-powershell"></a>ラボ: PowerShell を使用した Azure リソース管理
 
 ## <a name="scenario"></a>シナリオ
@@ -35,7 +30,7 @@ ms.locfileid: "146824972"
 
 このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って **Adatum\\Administrator** としてサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
 1. **LON-CL1** について手順 1 を繰り返します。
 
 ## <a name="exercise-1-activating-the-azure-subscription-and-installing-the-powershell-az-module"></a>演習 1: Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
@@ -58,7 +53,7 @@ ms.locfileid: "146824972"
 
 ### <a name="task-2-install-the-azure-az-module-for-powershell"></a>タスク 2: Azure Az module for PowerShell をインストールする
 
-1. **LON-CL1** で、PowerShell 7.1 環境を開始します。
+1. **LON-CL1**で、PowerShell 7.1 環境を開始します。
 1. PowerShell のバージョンを確認するには、`$PSVersionTable.PSVersion` を使用します。
 1. 現在のユーザーの実行ポリシーを **RemoteSigned** に設定します。
 1. PowerShell ギャラリーから、**install-module** コマンドを使用して、現在のユーザーの Az モジュールをインストールします。
@@ -149,7 +144,7 @@ Azure サブスクリプションとリソース グループを作成したら�
    Update-AzVM -ResourceGroupName $rgName -VM $VirtualMachine
    ```
 
-1. Azure portal に切り替えて、 **[Disks]** ページを更新します。 **[データ ディスク]** セクションに、**disk1** という名前の新しいディスクがあることを確認します。
+1. Azure portal に切り替えて、 **[Disks]** ページを更新します。 **[データ ディスク]** セクションに、**disk1**という名前の新しいディスクがあることを確認します。
 
 ### <a name="task-3-delete-the-azure-resources"></a>タスク 3:Azure リソースを削除する
 

@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell でのスクリプトの使用'
   type: Answer Key
   module: 'Module 4: Windows PowerShell scripting'
-ms.openlocfilehash: 1ebd7589c01be5cc0f8927effcf888b9e4151f49
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824953"
 ---
+
 # <a name="lab-answer-key-using-scripts-with-powershell"></a>ラボの応答キー: PowerShell でのスクリプトの使用
 
 ## <a name="exercise-1-signing-a-script"></a>演習 1: スクリプトへの署名

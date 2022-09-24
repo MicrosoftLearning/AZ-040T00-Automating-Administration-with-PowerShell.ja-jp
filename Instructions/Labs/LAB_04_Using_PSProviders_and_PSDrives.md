@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell での PSProviders と PSDrives の使用'
   module: 'Module 4: Using PSProviders and PSDrives'
-ms.openlocfilehash: 33cd4370eeb863407b52911a8ac45ed02e7d1ffd
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824956"
 ---
+
 # <a name="lab-using-psproviders-and-psdrives-with-powershell"></a>ラボ: PowerShell での PSProviders と PSDrives の使用
 
 ## <a name="scenario"></a>シナリオ
