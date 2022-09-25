@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell を使用した Azure リソース管理'
   type: Answer Key
   module: 'Module 9: Managing Azure resources with PowerShell'
-ms.openlocfilehash: 028becb4000c2a4143f85f636c373044f05f20f4
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824945"
 ---
+
 # <a name="lab-answer-key-azure-resource-management-with-powershell"></a>ラボの回答キー: PowerShell を使用した Azure リソース管理
 
 ## <a name="exercise-1-activating-the-azure-subscription-and-installing-the-powershell-az-module"></a>演習 1: Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
@@ -158,7 +153,7 @@ ms.locfileid: "146824945"
 
 1. **LON-CL1** コンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウに切り替え、 **[Virtual Machines]** ページに移動します。
 1. **[Virtual Machines]** ページで、 **[TestVM1]** エントリを選択します。
-1. **[TestVM1]** VM の **概要** ページで、そのパラメーターを確認し、ナビゲーション メニューの **[設定]** セクションで **[ディスク]** を選択します。 
+1. **[TestVM1]** VM の**概要**ページで、そのパラメーターを確認し、ナビゲーション メニューの **[設定]** セクションで **[ディスク]** を選択します。 
 1. ディスクの一覧を確認し、1 つのディスク (OS ディスク) のみが表示されていることを確認します。
 1. 既存の VM 用のデータ ディスクを作成するには、[PowerShell 7.1] ウィンドウで次のコマンドを入力し、それぞれの後に Enter キーを押します。
 

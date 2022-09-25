@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell パイプラインの使用'
   type: Answer Key
   module: 'Module 3: Working with the Windows PowerShell pipeline'
-ms.openlocfilehash: 786c0c87a4c814cb1b275d7e85d1b4f86dee0a7e
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146825149"
 ---
+
 # <a name="lab-answer-key-using-powershell-pipeline"></a>ラボの回答キー:PowerShell パイプラインの使用
 
 ## <a name="exercise-1-enumerating-objects"></a>演習 1:オブジェクトの列挙

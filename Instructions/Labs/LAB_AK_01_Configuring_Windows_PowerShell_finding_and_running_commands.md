@@ -3,13 +3,8 @@ lab:
   title: 'ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行'
   type: Answer Key
   module: 'Module 1: Getting Started with Windows PowerShell'
-ms.openlocfilehash: 90cc9338919555b7e8372513acda3db04ec70604
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824962"
 ---
+
 # <a name="lab-answer-key-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行
 
 ## <a name="exercise-1-configuring-the-windows-powershell-console-application"></a>演習 1: Windows PowerShell コンソール アプリケーションの構成
@@ -20,7 +15,7 @@ ms.locfileid: "146824962"
 1. 「**powershell**」と入力して、Windows PowerShell アイコンを表示します。 アイコン名が **Windows PowerShell (x86)** ではなく **Windows PowerShell** と表示されていることを確認します。
 1. **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選びます。
 1. ウィンドウのタイトル バーに **"管理者"** と表示され、 **"(x86)"** というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者が実行していることを示しています。
-1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで **Windows PowerShell コンソール** が開き、**管理者** によって実行され、今後もタスク バーで使用できるようになりました。
+1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで **Windows PowerShell コンソール**が開き、**管理者**によって実行され、今後もタスク バーで使用できるようになりました。
 
 ### <a name="task-2-configure-the-windows-powershell-console-application"></a>タスク 2: Windows PowerShell コンソール アプリケーションを構成する
 
@@ -48,7 +43,7 @@ ms.locfileid: "146824962"
 
 ### <a name="task-3-start-a-shell-transcript"></a>タスク 3: シェル トランスクリプトを開始する
 
-- **Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
+- **[Windows PowerShell]** コンソールで、次のコマンドを入力し、Enter キーを押します。
 
    ```ps
    Start-Transcript C:\DayOne.txt
@@ -70,7 +65,7 @@ ms.locfileid: "146824962"
 
 1. ISE ウィンドウを閉じます。
 
-1. タスクバーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを起動して、 **[ISE を管理者として実行する]** を選びます。 これで、**管理者** として Windows PowerShell ISE が実行されます。
+1. タスクバーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを起動して、 **[ISE を管理者として実行する]** を選びます。 これで、**管理者**として Windows PowerShell ISE が実行されます。
 
 ### <a name="task-2-customize-the-ises-appearance-to-use-a-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: 単一枠ビューを使用するように ISE の外観をカスタマイズし、[コマンド] ウィンドウを非表示にし、フォント サイズを調整する
 

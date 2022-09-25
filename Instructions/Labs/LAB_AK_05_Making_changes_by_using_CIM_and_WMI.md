@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: WMI と CIM を使って情報についてのクエリを実行する'
   type: Answer Key
   module: 'Module 5: Querying management information by using CIM and WMI'
-ms.openlocfilehash: 86bb8b6d2d0bf5052569c0ab8d5ce82ba38a0f34
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824943"
 ---
+
 # <a name="lab-answer-key-querying-information-by-using-wmi-and-cim"></a>ラボの回答キー: WMI と CIM を使った情報のクエリ
 
 ## <a name="exercise-1-querying-information-by-using-wmi"></a>演習 1: WMI を使った情報のクエリ

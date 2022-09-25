@@ -1,14 +1,9 @@
 ---
 lab:
-  title: ラボ A:PowerShell パイプラインの使用
+  title: 'ラボ A:PowerShell パイプラインの使用'
   module: 'Module 3: Working with the Windows PowerShell pipeline'
-ms.openlocfilehash: 740699b8d650e3d8b35dd231b1051a2ba0050edd
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146825144"
 ---
+
 # <a name="lab-using-powershell-pipeline"></a>ラボ: PowerShell パイプラインの使用
 
 ## <a name="scenario"></a>シナリオ
@@ -132,8 +127,8 @@ Adatum Corporation の管理タスクの 1 つは、高度な PowerShell スク�
 
 ### <a name="task-2-create-a-report-displaying-the-security-event-log-entries-that-have-the-event-id-4624"></a>タスク 2:イベント ID 4624 のセキュリティ イベント ログ エントリを表示するレポートを作成する
 
-1. イベント ID **4624** の **セキュリティ** イベント ログ エントリの合計数のみを表示します。
-1. イベント ID **4624** の **セキュリティ** イベント ログ エントリの完全なリストを表示し、書き込まれた時刻、イベント ID、メッセージのみを表示します。
+1. イベント ID **4624** の**セキュリティ** イベント ログ エントリの合計数のみを表示します。
+1. イベント ID **4624** の**セキュリティ**イベント ログ エントリの完全なリストを表示し、書き込まれた時刻、イベント ID、メッセージのみを表示します。
 1. メッセージの詳細を確認できる形式で、10 個の最も古いエントリのみを表示します。
 
 ### <a name="task-3-display-a-list-of-the-encryption-certificates-installed-on-the-computer"></a>タスク 3: コンピューターにインストールされている暗号化証明書のリストを表示する

@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: Windows PowerShell の構成およびコマンドの検索と実行'
   module: 'Module 1: Getting Started with Windows PowerShell'
-ms.openlocfilehash: fcf09d463080430d0f294b9f328d1f4700d6998f
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824959"
----
+--- 
+
 # <a name="lab-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボ: Windows PowerShell の構成およびコマンドの検索と実行
 
 ## <a name="scenario"></a>シナリオ
@@ -62,7 +57,7 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 
 ### <a name="task-1-start-the-console-application-as-administrator-and-pin-the-windows-powershell-icon-to-the-taskbar"></a>タスク 1: 管理者としてコンソール アプリケーションを起動し、Windows PowerShell アイコンをタスク バーにピン留めする
 
-1. **LON-CL1** で、**管理者** として **Windows PowerShell** アプリケーションを起動します。 ウィンドウのタイトル バーに "**管理者**" と表示され、"(x86)" というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者がそれを実行していることを示しています。
+1. **LON-CL1**で、**管理者**として **Windows PowerShell** アプリケーションを起動します。 ウィンドウのタイトル バーに "**管理者**" と表示され、"(x86)" というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者がそれを実行していることを示しています。
 1. Windows PowerShell アイコンをタスク バーにピン留めします。
 
 ### <a name="task-2-configure-the-windows-powershell-console-application"></a>タスク 2: Windows PowerShell コンソール アプリケーションを構成する
@@ -98,7 +93,7 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 
 ### <a name="task-1-open-the-windows-powershell-ise-application-as-administrator"></a>タスク 1: 管理者として Windows PowerShell ISE アプリケーションを開く
 
-1. タスクバーの **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューをアクティブ化し、**管理者** として **Windows PowerShell ISE** アプリケーションを開きます。
+1. タスクバーの **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューをアクティブ化し、**管理者**として **Windows PowerShell ISE** アプリケーションを開きます。
 
 ### <a name="task-2-customize-the-appearance-of-the-ise-to-use-the-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: ISE の外観をカスタマイズし、単一枠ビュー、コマンド ペインの非表示、フォント サイズの調整を行う
 
@@ -146,7 +141,7 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 
 4. BITS サービスのスタートアップの種類を **[自動]** に設定します。
 
-   a.   **コンピューターの管理** コンソールを開き、 **[アプリケーションとサービス]** に移動します。
+   a.   **コンピューターの管理**コンソールを開き、 **[アプリケーションとサービス]** に移動します。
 
    b.   バックグラウンド インテリジェント転送サービス (BITS) を見つけて、Windows PowerShell でスタートアップの種類を変更する前と後のスタートアップの種類の設定をメモします。
 

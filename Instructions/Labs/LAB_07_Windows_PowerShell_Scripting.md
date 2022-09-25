@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell でのスクリプトの使用'
   module: 'Module 4: Windows PowerShell scripting'
-ms.openlocfilehash: 9a27794afee306862c49d89c27958f811c456b5b
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116714"
 ---
+
 # <a name="lab-using-scripts-with-powershell"></a>ラボ: PowerShell でのスクリプトの使用
 
 ## <a name="scenario"></a>シナリオ
@@ -55,11 +50,11 @@ ms.locfileid: "132116714"
 
 1. **LON-CL1 で**、**MMC** コンソールを開いてから、 **[ユーザー アカウント]** に焦点を当てた **[証明書]** スナップインを追加します。
 1. **MMC** コンソールで、 **[証明書 - 現在のユーザー\\個人]** を参照します。
-1. **個人** フォルダーのコンテキスト メニューを使用し、 **[新しい証明書の要求]** を選択します。
+1. **個人**フォルダーのコンテキスト メニューを使用し、 **[新しい証明書の要求]** を選択します。
 1. **[証明書の登録]** ウィザードで次の設定を使用します。
 
    - **Active Directory 登録ポリシー**
-   - **Adatum コード署名** テンプレート
+   - **Adatum コード署名**テンプレート
 
 1. **MMC** コンソールで、新しいコード署名証明書があることを確認します。
 1. **MMC** コンソールを閉じます。
@@ -68,7 +63,7 @@ ms.locfileid: "132116714"
 
 1. Windows PowerShell プロンプトを開きます。
 1. **Cert:\CurrentUser\My** のコード署名証明書を変数に配置します。
-1. **E:\Mod07\Labfiles** で、**HelloWorld.txt** の名前を **HelloWorld.ps1** に変更します。
+1. **E:\Mod07\Labfiles**で、**HelloWorld.txt** の名前を **HelloWorld.ps1** に変更します。
 1. **Set-Authenticode** コマンドレットを使用して、デジタル署名を **HelloWorld.ps1** に適用します。
 
 ### <a name="task-3-set-the-execution-policy"></a>タスク 3: 実行ポリシーを設定する

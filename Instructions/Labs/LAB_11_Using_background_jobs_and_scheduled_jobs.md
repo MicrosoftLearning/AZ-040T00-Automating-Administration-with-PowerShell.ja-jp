@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell を使用したジョブ管理'
   module: 'Module 11: Using background jobs and scheduled jobs'
-ms.openlocfilehash: d5d4d4fd1a3d668446f64d4c40cc6981f435f932
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824973"
 ---
+
 # <a name="lab-jobs-management-with-powershell"></a>ラボ: PowerShell を使用したジョブ管理
 
 ## <a name="scenario"></a>シナリオ
@@ -62,14 +57,14 @@ ms.locfileid: "146824973"
 
 ### <a name="task-2-start-a-local-job"></a>タスク 2: ローカル ジョブを開始する
 
-1. すべてのエントリを **セキュリティ** イベント ログから取得するローカル ジョブを開始します。 ジョブに **LocalSecurity** という名前を付けます。
+1. すべてのエントリを**セキュリティ** イベント ログから取得するローカル ジョブを開始します。 ジョブに **LocalSecurity** という名前を付けます。
 1. 範囲演算子 ( **..** ) と **ForEach-Object** を使用して、ドライブ **C** の 100 個のディレクトリ一覧 (サブフォルダーを含む) を生成するローカル ジョブを開始します。 ジョブに **LocalDir** という名前を付けます。 このジョブがまだ実行されている間に、次のタスクに進みます。
 
 ### <a name="task-3-review-and-manage-job-status"></a>タスク 3: ジョブの状態を確認して管理する
 
 1. **LON-CL1** に **Adatum\\Administrator** として、パスワード **Pa55w.rd** を使用して確実にサインインします。
 1. 実行中のジョブの一覧を表示します。
-1. 名前が **リモート** で始まる実行中のジョブの一覧を表示します。
+1. 名前が**リモート**で始まる実行中のジョブの一覧を表示します。
 1. **LocalDir** ジョブを強制的に停止します。
 1. 残りのすべてのジョブが正常終了するか、失敗するのを待ちます。
 1. **RemoteNetAdapt** ジョブの結果を受信します。
@@ -124,7 +119,7 @@ ms.locfileid: "146824973"
     - 名前と説明:「**Managers セキュリティ グループから、無効にされたユーザーを削除する**」と入力します
     - セキュリティ オプション: **[ユーザーがログオンしているかどうかにかかわらず実行する]** と **[最高の特権で実行する]** と指定します
     - トリガーの設定: **[毎日]** を指定し、時刻は現在の時刻の 5 分後に設定します
-    - アクション: **プログラムまたはスクリプト** を **PowerShell.exe** に設定します
+    - アクション: **プログラムまたはスクリプト**を **PowerShell.exe** に設定します
     - 引数の追加 (省略可能): 「**-ExecutionPolicy Bypass E:\\Labfiles\\Mod11\\DeleteDisabledUserManagersGroup.ps1**」と入力します
     - 設定: **[タスクが既に実行中の場合に適用される規則]** を **[既存のインスタンスの停止]** に設定します
 

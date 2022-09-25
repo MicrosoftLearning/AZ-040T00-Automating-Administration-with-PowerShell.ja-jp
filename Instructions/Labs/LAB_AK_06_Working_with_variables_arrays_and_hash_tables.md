@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する'
   type: Answer Key
   module: 'Module 6: Working with variables, arrays, and hash tables'
-ms.openlocfilehash: f6d5b6dc325cac9039ee3d7447ca1634e2ec34a1
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824970"
 ---
+
 # <a name="lab-answer-key-using-variables-arrays-and-hash-tables-in-powershell"></a>ラボの回答キー: PowerShell で変数、配列、ハッシュ テーブルを使用する
 
 ## <a name="exercise-1-working-with-variable-types"></a>演習 1: 変数型の使用

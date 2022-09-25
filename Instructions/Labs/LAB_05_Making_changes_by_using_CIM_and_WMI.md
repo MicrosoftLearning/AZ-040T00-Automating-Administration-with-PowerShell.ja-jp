@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: WMI と CIM を使って情報についてのクエリを実行する'
   module: 'Module 5: Querying management information by using CIM and WMI'
-ms.openlocfilehash: e32bb5ff582e809e039a15af7a47cbb4b60018c9
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824954"
 ---
+
 # <a name="lab-querying-information-by-using-wmi-and-cim"></a>ラボ: WMI と CIM を使って情報についてのクエリを実行する
 
 ## <a name="scenario"></a>シナリオ
@@ -35,7 +30,7 @@ ms.locfileid: "146824954"
 
 このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って **Adatum\\Administrator** としてサインインします。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
 1. **LON-CL1** について手順 1 を繰り返します。
 
 ## <a name="exercise-1-querying-information-by-using-wmi"></a>演習 1: WMI を使って情報についてのクエリを実行する

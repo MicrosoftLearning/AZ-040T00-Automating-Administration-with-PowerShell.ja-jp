@@ -2,13 +2,8 @@
 lab:
   title: 'ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する'
   module: 'Module 6: Working with variables, arrays, and hash tables'
-ms.openlocfilehash: a8d296b37c1ddd1b06554f79512b49cc4790af1d
-ms.sourcegitcommit: a95a9bb3a7919b785df0574c3407f4b6c3bea9f5
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2021
-ms.locfileid: "132116707"
 ---
+
 # <a name="lab-using-variables-arrays-and-hash-tables-in-powershell"></a>ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する
 
 ## <a name="scenario"></a>シナリオ

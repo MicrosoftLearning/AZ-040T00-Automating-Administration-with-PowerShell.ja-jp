@@ -3,13 +3,8 @@ lab:
   title: 'ラボ: PowerShell を使用したローカル システム管理の実行'
   type: Answer Key
   module: 'Module 2: Windows PowerShell for local systems administration'
-ms.openlocfilehash: 961ee19c82532a5e7ace90e181dee46c7d05ed94
-ms.sourcegitcommit: 9c31a6ab628c30fac88ec9070c3d807f2a9bbfdb
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2022
-ms.locfileid: "146824966"
 ---
+
 # <a name="lab-answer-key-performing-local-system-administration-with-powershell"></a>ラボの回答キー:PowerShell を使用したローカル システム管理の実行
 
 ## <a name="exercise-1-creating-and-managing-active-directory-objects"></a>演習 1: Active Directory オブジェクトの作成と管理
