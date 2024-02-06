@@ -1,40 +1,48 @@
 ---
 lab:
-  title: 'ラボ: PowerShell を使用した Azure リソース管理'
+  title: 'ラボ: PowerShell を使った Azure リソースの管理'
   type: Answer Key
   module: 'Module 9: Managing Azure resources with PowerShell'
 ---
 
-# <a name="lab-answer-key-azure-resource-management-with-powershell"></a>ラボの回答キー: PowerShell を使用した Azure リソース管理
+# ラボの回答キー: PowerShell を使用した Azure リソース管理
 
-## <a name="exercise-1-activating-the-azure-subscription-and-installing-the-powershell-az-module"></a>演習 1: Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
+## 演習 1:Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
 
-### <a name="task-1-activate-your-azure-subscription-by-using-azure-pass-voucher"></a>タスク 1: Azure Pass のバウチャーを使用して Azure サブスクリプションをアクティブにする
+#### タスク 1: Azure portal を開く
 
-1. **LON-CL1** で Microsoft Edge ブラウザーを開き、 **https://www.microsoftazurepass.com/** に移動します。
-1. **[Try Microsoft Azure Pass]\(Microsoft Azure Pass を試す\)** Web ページで、 **[始める]** を選択します。
-1. **[サインイン]** ページで、Azure Pass に使用する Microsoft アカウントを入力します。 任意の Microsoft アカウントにすることも、新しいアカウントを作成することもできます。 後で必要になるため、ここでサインインに使用するアカウントを必ずメモしてください。 **[次へ]** を選択します。
-1. **[パスワードの入力]** ページで、このラボで使用する Microsoft アカウントのパスワードを入力します。 **[サインイン]** をクリックします。
-1. 確認ページで、指定したデータを確認し、 **[Microsoft アカウントの確認]** を選択します。
-1. **[プロモーション コードの入力]** ボックスに、インストラクターまたはラボ ホスティング プロバイダーから提供された Azure Pass コードを入力します。 **[プロモーション コードの要求]** を選択します。 要求が処理されるまで待ちます。
-1. **[プロファイル]** ページで、自分のデータを確認し、 **[サブスクリプション契約、プランの詳細、およびプライバシーに関する声明に同意します]** をオンにして、 **[サインアップ]** を選択します。
-1. **[アカウントの設定中]** ページで、サインアップ エクスペリエンスに関するフィードバックを入力し、 **[送信]** を選択します。
-1. Azure portal が開きます。 **[Microsoft Azure へようこそ]** ページで、 **[後で]** を選択してツアーをスキップします。
-1. **[Microsoft Azure]** ページで、 **[サブスクリプション]** を選択します。
-1. **[サブスクリプション]** ページで、 **[Azure Pass - スポンサー プラン]** の状態が **[アクティブ]** であることを確認します。
-1. 同じ Microsoft Edge ウィンドウで新しいタブを開き、 **https://www.microsoftazuresponsorships.com/** に移動します。
-1. **[Azure スポンサー プラン]** ページで、 **[残高の確認]** を選択します。
-1. **[Azure スポンサー プラン]** ページで、使用可能なクレジットが 50 米国ドルであることを確認します。 **[Azure スポンサー プラン]** タブを閉じます。Microsoft Azure portal タブは開いたままにしておきます。
+1. タスク バーで、**Microsoft Edge** アイコンを選択します。
 
-### <a name="task-2-install-the-azure-az-module-for-powershell"></a>タスク 2: Azure Az module for PowerShell をインストールする
+1. ブラウザー ウィンドウで、Azure portal (`https://portal.azure.com`) に移動してから、このラボで使用するアカウントでサインインします。
+
+   > **注**: Azure portal に初めてサインインしている場合は、ポータルのツアーが表示されます。 このツアーをスキップする場合は、 **[後で行う]** を選択してポータルの使用を開始します。
+
+### タスク 2: Azure Az module for PowerShell をインストールする
 
 1. **[スタート]** メニューを選択してから、「**pwsh**」と入力します。
-1. 結果リストで、 **[PowerShell 7 (x64)]** を右クリックするか、そのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
-1. **[管理者:PowerShell 7 (x64)]** ウィンドウで、次のコマンドを入力し、Enter キーを押して、PowerShell のバージョンを確認します。
+
+1. 結果リストで、**[PowerShell 7 (x64)]** を右クリックするか、そのコンテキスト メニューをアクティブにして、**[管理者として実行]** を選択します。
+
+1. 
+          **[管理者:PowerShell 7 (x64)]** ウィンドウで、次のコマンドを入力し、Enter キーを押して、PowerShell のバージョンを確認します。
 
    ```powershell
    $PSVersionTable.PSVersion
    ```
+
+1. 次のコマンドを入力し、Enter キーを押して PowerShell 7 を更新します。
+      
+   ```powershell
+   # Update PowerShell 7 to the latest version
+   iex "& { $(irm https://aka.ms/install-powershell.ps1 -UseBasicP) }"
+
+   # Open a new PowerShell 7 window as an administrator
+   Start-Process -FilePath "C:\Users\Administrator.ADATUM\AppData\Local\Microsoft\powershell\pwsh.exe" -Verb RunAs
+
+   # Close the current PowerShell window
+   Stop-Process -Id $PID 
+   
+   ```  
 
 1. 実行ポリシーを適切な値に設定して Az モジュールをインストールできるようにするには、次のコマンドを入力し、Enter キーを押します。 「**Y**」と入力して、選択した内容を確認します。
 
@@ -42,13 +50,14 @@ lab:
    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    ```
 
-1. Az モジュールをインストールするには、次のコマンドを入力します。
+1. Az モジュールをインストールするには、次のコマンドを入力します。 「**Y**」と入力して、選択した内容を確認します。
 
    ```powershell
    Install-Module -Name Az -Scope CurrentUser -Repository PSGallery -Force
    ```
 
 1. モジュールがインストールされ、コマンド プロンプトが表示されるまで待ちます。
+
 1. Az モジュールがインストールされたら、次のコマンドを入力します。
 
    ```powershell
@@ -56,45 +65,60 @@ lab:
    ```
 
 1. メッセージが表示されたら、前のタスクで使用したアカウントでサインインし、Azure サブスクリプションをプロビジョニングします。
+
 1. サインイン後、アカウント名と Azure サブスクリプションの詳細が一覧に表示されていることを確認します。
 
-## <a name="exercise-2-using-azure-cloud-shell"></a>演習 2: Azure Cloud Shell の使用
+## 演習 2:Azure Cloud Shell の使用
 
-### <a name="task-1-use-azure-cloud-shell-to-create-a-resource-group"></a>タスク 1: Azure Cloud Shell を使って、リソース グループを作成する
+### タスク 1: Azure Cloud Shell を使って、リソース グループを作成する
 
-1. **LON-CL1** のコンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウ (https://portal.azure.com ) に切り替えます。
-1. Microsoft Azure portal のホームページで、 **[仮想マシン]** を選択します。 仮想マシン (VM) が作成されていないことを確認します。 **[ホーム]** を選択します。
-1. Microsoft Azure portal のホームページで、 **[ストレージ アカウント]** を選択します。 ストレージ アカウントが作成されていないことを確認します。 **[ホーム]** を選択します。
-1. Microsoft Azure portal のホームページで、 **[Cloud Shell]** アイコンを選択します。
+1. **LON-CL1** のコンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウに切り替えます。
+
+1. Microsoft Azure portal のホームページで、**[仮想マシン]** を選択します。 仮想マシン (VM) が作成されていないことを確認します。 **[ホーム]** を選択します。
+
+1. Microsoft Azure portal のホームページで、**[ストレージ アカウント]** を選択します。 ストレージ アカウントが作成されていないことを確認します。 **[ホーム]** を選択します。
+
+1. Microsoft Azure portal のホームページで、**[Cloud Shell]** アイコンを選択します。
+
 1. **[Azure Cloud Shell へようこそ]** ウィンドウで **[PowerShell]** を選択します。
-1. **[ストレージがマウントされていません]** ページで、Cloud Shell を実行するために必要なストレージ アカウントがないことに関する注記を確認します。 **"サブスクリプション"** フィールドで、自分のサブスクリプションが選択されていることを確認し、 **[ストレージの作成]** を選択します。 ストレージ アカウントが作成されるまで待ちます。
-1. ストレージ アカウントが作成されると、 **[Cloud Shell]** コンソールが開き、**PS /home/yourname>** の形式でプロンプトが表示されます。
-1. PowerShell プロンプトで、「**Get-AzSubscription**」と入力し、Enter キーを押してサブスクリプションを確認します。
-1. 「**Get-AzResourceGroup**」と入力し、リソース グループの情報を確認します。
+
+1. **[ストレージがマウントされていません]** ページで、Cloud Shell を実行するために必要なストレージ アカウントがないことに関する注記を確認します。 **"サブスクリプション"** フィールドで、自分のサブスクリプションが選択されていることを確認し、**[ストレージの作成]** を選択します。 ストレージ アカウントが作成されるまで待ちます。
+
+1. ストレージ アカウントが作成されると、**[Cloud Shell]** コンソールが開き、**PS /home/yourname>** の形式でプロンプトが表示されます。
+
+1. PowerShell プロンプトで、「`Get-AzSubscription`」と入力し、Enter キーを押してサブスクリプションを確認します。
+
+1. 「`Get-AzResourceGroup`」と入力してリソース グループ情報を確認します。
+
 1. ドロップダウン リストを使用して、PowerShell から **Bash** シェルに切り替えて、選択内容を確認します。
-1. Bash シェル プロンプトで、「**az account list**」と入力し、Enter キーを押してサブスクリプションに関する情報を確認します。 また、タブの補完を試してみてください。
-1. 「**az resource list**」と入力し、リソース グループの情報を確認します。
+
+1. Bash シェル プロンプトで、「`az account list`」と入力し、Enter キーを押してサブスクリプションに関する情報を確認します。 また、タブの補完を試してみてください。
+
+1. 「`az resource list`」と入力してリソース グループ情報を確認します。
+
 1. PowerShell インターフェイスに戻します。
-1. **PowerShell** コンソールで次のコマンドを入力し、Enter キーを押して新しいリソース グループを作成します (`<yourname>` プレースホルダーは、自分の名前に置き換えます)。
+
+1. **PowerShell** コンソールで次のコマンドを入力し、Enter キーを押して新しいリソース グループを作成します (`<resource-group-name>` プレースホルダーは、自分の名前に置き換えます)。
 
     ```powershell
-    New-AzResourceGroup -Name <yourname>M9 -Location westeurope
+    New-AzResourceGroup -Name <resource-group-name> -Location westeurope
     ```
 
 1. 新しいリソース グループが作成されていることを確認します。 ご利用のリソース グループの名前を記録します。 これは、このラボの次の演習で必要となります。
 
-## <a name="exercise-3-managing-azure-resources-with-azure-powershell"></a>演習 3: Azure PowerShell を使った Azure リソースの管理
+## 演習 3:Azure PowerShell を使った Azure リソースの管理
 
-### <a name="task-1-create-an-azure-vm-by-using-powershell"></a>タスク 1: PowerShell を使用して Azure VM を作成する
+### タスク 1: PowerShell を使用して Azure VM を作成する
 
-1. [PowerShell 7.1] ウィンドウで、次のコマンドを入力して、この演習で作成する Azure VM のオペレーティング システムの管理者資格情報を指定します。
+1. PowerShell ウィンドウで次のコマンドを入力し、この演習で作成する Azure VM のオペレーティング システムの管理者資格情報を指定します。
 
    ```powershell
    $cred = Get-Credential -Message "Enter an admin username and password for the operating system"
    ```
 
 1. プロンプトが表示されたら、新しい VM の管理者資格情報として使用する任意のユーザー名とパスワードを入力します。 ユーザー名として **Admin** または **Administrator** は使用しないでください。 小文字、大文字、数字、および少なくとも 1 つの特殊文字を含む、8 文字以上の複雑なパスワードを選択してください。
-1. [PowerShell 7.1] ウィンドウで、次のコマンドを入力して VM パラメーターを定義し、Enter キーを押します (`<resource-group-name>` プレースホルダーは、前の演習で作成したリソース グループの名前に置き換えます)。
+
+1. PowerShell ウィンドウで、次のコマンドを入力して VM パラメーターを定義し、Enter キーを押します (`<resource-group-name>` プレースホルダーは、前の演習で作成したリソース グループの名前に置き換えます)。
 
    ```powershell
    $vmParams = @{
@@ -141,6 +165,7 @@ lab:
    ```
 
 1. テーブル出力の **IPAddress** の値をメモします。
+
 1. 次のコマンドを入力し、Enter キーを押して、リモート デスクトップを使用して VM に接続します。
 
    ```powershell
@@ -149,27 +174,32 @@ lab:
 
 1. プロンプトが表示されたら、Azure VM のプロビジョニング中に指定した管理者資格情報でサインインします。 Windows Server 2019 VM に接続していることを確認したら、オペレーティング システムをシャットダウンします。 これにより、リモート デスクトップ セッションが自動的に終了します。
 
-### <a name="task-2-add-a-disk-to-the-azure-vm-by-using-powershell"></a>タスク 2: PowerShell を使用して Azure VM にディスクを追加する
+### タスク 2: PowerShell を使用して Azure VM にディスクを追加する
 
-1. **LON-CL1** コンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウに切り替え、 **[Virtual Machines]** ページに移動します。
-1. **[Virtual Machines]** ページで、 **[TestVM1]** エントリを選択します。
+1. **LON-CL1** コンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウに切り替え、**[Virtual Machines]** ページに移動します。
+
+1. **[Virtual Machines]** ページで、**[TestVM1]** エントリを選択します。
+
 1. **[TestVM1]** VM の**概要**ページで、そのパラメーターを確認し、ナビゲーション メニューの **[設定]** セクションで **[ディスク]** を選択します。 
+
 1. ディスクの一覧を確認し、1 つのディスク (OS ディスク) のみが表示されていることを確認します。
-1. 既存の VM 用のデータ ディスクを作成するには、[PowerShell 7.1] ウィンドウで次のコマンドを入力し、それぞれの後に Enter キーを押します。
+
+1. 既存の VM 用のデータ ディスクを作成するには、PowerShell ウィンドウで次のコマンドを入力し、それぞれの後に Enter キーを押します。
 
    ```powershell
-   $VirtualMachine = Get-AzVM -ResourceGroupName "yournameM9" -Name "TestVM1"
+   $VirtualMachine = Get-AzVM -ResourceGroupName "<resource-group-name>" -Name "TestVM1"
 
    Add-AzVMDataDisk -VM $VirtualMachine -Name "disk1" -LUN 0 -Caching ReadOnly -DiskSizeinGB 1 -CreateOption Empty
 
-   Update-AzVM -ResourceGroupName "yournameM9" -VM $VirtualMachine
+   Update-AzVM -ResourceGroupName "<resource-group-name>" -VM $VirtualMachine
    ```
 
-1. Azure portal に切り替えて、 **[TestVM1 \| ディスク]** ページを更新します。 ディスクの一覧の **[データ ディスク]** セクションに **disk1** という名前の新しいディスクが含まれているかどうかを確認します。
+1. Azure portal に切り替えて、**[TestVM1 \| ディスク]** ページを更新します。 ディスクの一覧の **[データ ディスク]** セクションに **disk1** という名前の新しいディスクが含まれているかどうかを確認します。
 
-### <a name="task-3-delete-the-azure-resources"></a>タスク 3:Azure リソースを削除する
+### タスク 3:Azure リソースを削除する
 
-1. **LON-CL1** コンピューターで、 **[PowerShell]** ウィンドウに戻ります。
+1. **LON-CL1** コンピューターで、**[PowerShell]** ウィンドウに戻ります。
+
 1. **[PowerShell]** コンソールで次のコマンドを入力し、Enter キーを押して、このラボで前に作成したリソース グループとそのすべてのリソースを削除します。
 
     ```powershell
