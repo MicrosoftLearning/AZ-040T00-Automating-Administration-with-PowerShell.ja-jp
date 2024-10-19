@@ -1,18 +1,18 @@
 ---
 lab:
-  title: 'ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する'
+  title: 'ラボ: PowerShell での変数、配列、ハッシュ テーブルの使用'
   type: Answer Key
   module: 'Module 6: Working with variables, arrays, and hash tables'
 ---
 
-# <a name="lab-answer-key-using-variables-arrays-and-hash-tables-in-powershell"></a>ラボの回答キー: PowerShell で変数、配列、ハッシュ テーブルを使用する
+# ラボの回答キー: PowerShell で変数、配列、ハッシュ テーブルを使用する
 
-## <a name="exercise-1-working-with-variable-types"></a>演習 1: 変数型の使用
+## 演習 1:変数型の使用
 
-### <a name="task-1-use-string-variables"></a>タスク 1: 文字列変数を使用する
+### タスク 1: 文字列変数を使用する
 
 1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
-1. 結果の一覧で、 **[Windows PowerShell]** を右クリックするか、またはそのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
+1. 結果リストで、**[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、**[管理者として実行]** を選択します。
 1. `$logPath` 変数を設定するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
@@ -69,7 +69,7 @@ lab:
 
 1. 次のタスクのために、Windows PowerShell プロンプトを開いたままにします。
 
-### <a name="task-2-use-datetime-variables"></a>タスク 2: DateTime 変数を使用する
+### タスク 2: DateTime 変数を使用する
 
 1. `$today` 変数を今日の日付に等しい値に設定するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
@@ -101,7 +101,7 @@ lab:
    $cutOffDate = $today.AddDays(-30)
    ```
 
-1. 過去 30 日間サインインしていないユーザーを確認するには、次のコマンドを入力し、Enter キーを押します。
+1. 過去 30 日間にサインインしたユーザーを確認するには、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-ADUser -Properties LastLogonDate -Filter {LastLogonDate -gt $cutOffDate}
@@ -109,9 +109,9 @@ lab:
 
 1. 次の演習のために、Windows PowerShell プロンプトを開いたままにします。
 
-## <a name="exercise-2-using-arrays"></a>演習 2: 配列の使用
+## 演習 2:配列の使用
 
-### <a name="task-1-use-an-array-to-update-the-department-for-users"></a>タスク 1: 配列を使用してユーザーの部署を更新する
+### タスク 1: 配列を使用してユーザーの部署を更新する
 
 1. **Marketing** 部門のすべてのユーザーについてクエリを実行するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
@@ -159,7 +159,7 @@ lab:
 
 1. 次のタスクのために、Windows PowerShell プロンプトを開いたままにします。
 
-### <a name="task-2-use-an-array-list"></a>タスク 2: 配列リストを使用する
+### タスク 2: 配列リストを使用する
 
 1. コンピューター名の配列リストを作成するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 
@@ -193,9 +193,9 @@ lab:
 
 1. 次の演習のために、Windows PowerShell プロンプトを開いたままにします。
 
-## <a name="exercise-3-using-hash-tables"></a>演習 3: ハッシュ テーブルの使用
+## 演習 3:ハッシュ テーブルを使用する
 
-### <a name="task-1-use-a-hash-table"></a>タスク 1: ハッシュ テーブルを使用する
+### タスク 1: ハッシュ テーブルを使用する
 
 1. 名前とメール アドレスを含むハッシュ テーブルを作成するには、Windows PowerShell プロンプトで次のコマンドを入力し、Enter キーを押します。
 

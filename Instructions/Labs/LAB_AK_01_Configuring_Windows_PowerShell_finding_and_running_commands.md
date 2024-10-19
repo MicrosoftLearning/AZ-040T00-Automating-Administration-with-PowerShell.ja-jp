@@ -1,23 +1,23 @@
 ---
 lab:
-  title: 'ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行'
+  title: 'ラボの回答キー: Windows PowerShell の構成と、コマンドの検出および実行'
   type: Answer Key
   module: 'Module 1: Getting Started with Windows PowerShell'
 ---
 
-# <a name="lab-answer-key-configuring-windows-powershell-and-finding-and-running-commands"></a>ラボの回答キー: Windows PowerShell の構成、コマンドの検出と実行
+# ラボの回答キー: Windows PowerShell の構成と、コマンドの検出および実行
 
-## <a name="exercise-1-configuring-the-windows-powershell-console-application"></a>演習 1: Windows PowerShell コンソール アプリケーションの構成
+## 演習 1:Windows PowerShell コンソール アプリケーションの構成
 
-### <a name="task-1-start-the-console-application-as-administrator-and-pin-the-windows-powershell-icon-to-the-taskbar"></a>タスク 1: 管理者としてコンソール アプリケーションを起動し、Windows PowerShell アイコンをタスク バーにピン留めする
+### タスク 1: 管理者としてコンソール アプリケーションを起動し、Windows PowerShell アイコンをタスク バーにピン留めする
 
-1. **LON-CL1** で、 **[開始]** を選びます。
+1. **LON-CL1** で、**[開始]** を選択します。
 1. 「**powershell**」と入力して、Windows PowerShell アイコンを表示します。 アイコン名が **Windows PowerShell (x86)** ではなく **Windows PowerShell** と表示されていることを確認します。
-1. **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選びます。
-1. ウィンドウのタイトル バーに **"管理者"** と表示され、 **"(x86)"** というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者が実行していることを示しています。
+1. **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、**[管理者として実行]** を選びます。
+1. ウィンドウのタイトル バーに **"管理者"** と表示され、**"(x86)"** というテキストが含まれていないことを確認します。 これは、このアプリケーションが 64 ビット コンソール アプリケーションであり、管理者が実行していることを示しています。
 1. タスク バーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを開いて **[タスク バーにピン留めする]** を選びます。 これで **Windows PowerShell コンソール**が開き、**管理者**によって実行され、今後もタスク バーで使用できるようになりました。
 
-### <a name="task-2-configure-the-windows-powershell-console-application"></a>タスク 2: Windows PowerShell コンソール アプリケーションを構成する
+### タスク 2: Windows PowerShell コンソール アプリケーションを構成する
 
 1. **Consolas** フォントを使うように Windows PowerShell を構成するには:
 
@@ -25,11 +25,11 @@ lab:
 
    b.   **[プロパティ]** を選択します。
 
-   c.    **[Windows PowerShell のプロパティ]** ダイアログ ボックスで **[フォント]** タブを選び、 **[フォント]** リストから **[Consolas]** を選びます。
+   c.    **[Windows PowerShell のプロパティ]** ダイアログ ボックスで **[フォント]** タブを選び、**[フォント]** リストから **[Consolas]** を選びます。
 
    d.   **[サイズ]** リストから **[16]** を選びます。
 
-1. 別の表示色を選ぶには、 **[色]** タブで使用できる **[画面の文字]** と **[画面の背景]** の色を確認します。
+1. 別の表示色を選ぶには、**[色]** タブで使用できる **[画面の文字]** と **[画面の背景]** の色を確認します。
 
     > **注:** さまざまな組み合わせを試してください。 カラー ピッカーを使うと、簡単に色を変更し、読みやすくすることができます。
 
@@ -37,13 +37,13 @@ lab:
 
    a.   **[レイアウト]** タブの **[ウィンドウのサイズ]** 設定で、**Windows PowerShell** コンソール ペインのプレビューが **[ウィンドウのプレビュー]** 領域に完全に収まるまで、領域の **[幅]** と **[高さ]** の値を変更します。
 
-   b.   **[レイアウト]** タブの **[画面バッファーの** **サイズ]** 設定で、 **[幅]** の値を **[ウィンドウのサイズ]** 設定の **[幅]** の値と同じになるように変更します。
+   b.   **[レイアウト]** タブの **[画面バッファーの****サイズ]** 設定で、**[幅]** の値を **[ウィンドウのサイズ]** 設定の **[幅]** の値と同じになるように変更します。
 
 1. **[OK]** を選択します。 これでコンソール アプリケーションを使う準備は完了です。
 
-### <a name="task-3-start-a-shell-transcript"></a>タスク 3: シェル トランスクリプトを開始する
+### タスク 3: シェル トランスクリプトを開始する
 
-- **[Windows PowerShell]** コンソールで、次のコマンドを入力し、Enter キーを押します。
+- **Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
 
    ```ps
    Start-Transcript C:\DayOne.txt
@@ -51,13 +51,13 @@ lab:
 
     > **注:** これで、Windows PowerShell セッションのトランスクリプトが開始されました。 **Stop-Transcript** を実行するか、Windows PowerShell ウィンドウを閉じるまで、入力したすべてのコマンドとコマンド出力がテキスト ファイルに保存されます。 トランスクリプトの内容は、いつでも **C:\DayOne.txt** を開いて確認できます。
 
-### <a name="exercise-1-results"></a>演習 1 の結果
+### 演習 1 の結果
 
 この演習を完了すると、Windows PowerShell コンソール アプリケーションを開き、その外観とレイアウトを構成できるようになります。
 
-## <a name="exercise-2-configuring-the-windows-powershell-ise-application"></a>演習 2: Windows PowerShell ISE アプリケーションの構成
+## 演習 2:Windows PowerShell ISE アプリケーションの構成
 
-### <a name="task-1-open-the-windows-powershell-ise-application-as-administrator"></a>タスク 1: 管理者として Windows PowerShell ISE アプリケーションを開く
+### タスク 1: 管理者として Windows PowerShell ISE アプリケーションを開く
 
 1. **Windows PowerShell** コンソールで「**ise**」と入力して、Enter キーを押します。
 
@@ -65,9 +65,9 @@ lab:
 
 1. ISE ウィンドウを閉じます。
 
-1. タスクバーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを起動して、 **[ISE を管理者として実行する]** を選びます。 これで、**管理者**として Windows PowerShell ISE が実行されます。
+1. タスクバーにある **Windows PowerShell** アイコンを右クリックするか、コンテキスト メニューを起動して、**[ISE を管理者として実行する]** を選びます。 これで、**管理者**として Windows PowerShell ISE が実行されます。
 
-### <a name="task-2-customize-the-ises-appearance-to-use-a-single-pane-view-hide-the-command-pane-and-adjust-the-font-size"></a>タスク 2: 単一枠ビューを使用するように ISE の外観をカスタマイズし、[コマンド] ウィンドウを非表示にし、フォント サイズを調整する
+### タスク 2: 単一枠ビューを使用するように ISE の外観をカスタマイズし、[コマンド] ウィンドウを非表示にし、フォント サイズを調整する
 
 1. 単一枠ビューを使うように ISE を構成するには:
 
@@ -75,25 +75,25 @@ lab:
     
     b. **[スクリプト ウィンドウを非表示にします]** の上矢印アイコンを選び、コンソールを表示します。
     
-    > **注:**  または、**Ctrl + R** キーの組み合わせを押します。
+    > **注:** または、**Ctrl+R** キーの組み合わせを押しても構いません。
 
-1. **[コマンド]** ペインが表示されていない場合は、 **[コマンド アドオンを** **表示]** オプションを選んで表示します。
+1. **[コマンド]** ペインが表示されていない場合は、**[コマンド アドオンを****表示]** オプションを選んで表示します。
 
-1. **[コマンド]** ペインを非表示にするには、 **[コマンド アドオンを表示]** オプションを選びます。
+1. **[コマンド]** ペインを非表示にするには、**[コマンド アドオンを表示]** オプションを選びます。
 
 1. ウィンドウの右下隅にあるスライダーを使って、快適な見え方になるまでフォント サイズを調整します。
 
 1. **Windows PowerShell ISE** と **Windows PowerShell** のウィンドウを閉じます。
 
-### <a name="exercise-2-results"></a>演習 2 の結果
+### 演習 2 の結果
 
 この演習を完了すると、Windows PowerShell 統合スクリプト環境 (ISE) アプリケーションの外観をカスタマイズできるようになります。
 
-## <a name="exercise-3-finding-and-running-windows-powershell-commands"></a>演習 3: Windows PowerShell コマンドの検索と実行
+## 演習 3:Windows PowerShell のコマンドの検索と実行
 
-### <a name="task-1-find-commands-thatll-accomplish-specified-tasks"></a>タスク 1: 指定したタスクを実行するコマンドを見つける
+### タスク 1: 指定したタスクを実行するコマンドを見つける
 
-1. **LON-CL1** のタスク バーにある **Windows PowerShell** を右クリックし、 **[管理者として実行]** を選びます。
+1. **LON-CL1** のタスク バーにある **Windows PowerShell** を右クリックし、**[管理者として実行]** を選びます。
 
 1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
@@ -141,7 +141,7 @@ lab:
 
    > **注:** 最初の 3 つのコマンドを使うと、名前に *Adapter* が使われているコマンドの一覧が表示されます。 4 つ目を使うと、名前に *Adapter* を含み、*Set* 動詞が使われているコマンドの一覧が表示されます。 これで **Set-NetAdapter** コマンドが見つかります。
 
-1. **Get-Help Set-NetAdapter** を実行して、そのコマンドのヘルプを確認します。 これで、 *-MACAddress* パラメーターが見つかります。
+1. **Get-Help Set-NetAdapter** を実行して、そのコマンドのヘルプを確認します。 これで、*-MACAddress* パラメーターが見つかります。
 
 1. コンソールで次のいずれかのコマンドを入力して、Enter キーを押します。
 
@@ -239,7 +239,7 @@ lab:
    Get-Help Get-NetFirewallRule –Full
    ```
 
-   > **注:** これでコマンドのヘルプが表示されるので、 *-Enabled* パラメーターが見つかります。
+   > **注:** これでコマンドのヘルプが表示されるので、*-Enabled* パラメーターが見つかります。
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -271,7 +271,7 @@ lab:
 
    > **注:** 最初のコマンドを使うと、**Type** コマンドの別名の定義が表示されます。これは **cmd.exe** でファイルからテキストを確認するために使われるコマンドです。 2 つ目のコマンドを使うと、名前の名詞部分に *Content* を含むコマンドの一覧が表示されます。 これで **Get-Content** コマンドが見つかります。
 
-### <a name="task-2-run-commands-to-accomplish-specified-tasks"></a>タスク 2: コマンドを実行して指定されたタスクを実行する
+### タスク 2: コマンドを実行して指定されたタスクを実行する
 
 1. **Adatum\\Administrator** として **LON-CL1** 仮想マシンにサインインしている必要があります。
 
@@ -307,13 +307,13 @@ lab:
    Get-EventLog –LogName Security –Newest 10 
    ```
 
-### <a name="exercise-3-results"></a>演習 3 の結果
+### 演習 3 の結果
 
 この演習を完了すると、特定のタスクを実行する Windows PowerShell コマンドを見つけて実行できるようになります。
 
-## <a name="exercise-4-using-about-files"></a>演習 4: About ファイルの使用
+## 演習 4:About ファイルの使用
 
-### <a name="task-1-locate-and-review-about-help-files"></a>タスク 1: About ヘルプ ファイルを見つけて確認する
+### タスク 1: About ヘルプ ファイルを見つけて確認する
 
 1. 前の演習で **Adatum\\Administrator** として **LON-CL1** にサインインしたままであることを確認します。
 
@@ -355,8 +355,8 @@ lab:
    Get-Help about_signing 
    ```
 
-1. コード署名について説明します。 **MakeCert.exe** が自己署名デジタル証明書を作成するために使われることを学ぶ必要があります。
+1. コード署名について説明します。 **New-SelfSignedCertificate** が自己署名デジタル証明書の作成に使用されることを学ぶ必要があります。
 
-### <a name="exercise-4-results"></a>演習 4 の結果
+### 演習 4 の結果
 
 この演習を完了すると、**About** ファイル内のヘルプ コンテンツを見つけられるようになります。
