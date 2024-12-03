@@ -5,15 +5,16 @@ lab:
   module: 'Module 3: Working with the Windows PowerShell pipeline'
 ---
 
-# <a name="lab-answer-key-using-powershell-pipeline"></a>ラボの回答キー:PowerShell パイプラインの使用
+# ラボ回答キー: PowerShell パイプラインの使用
 
-## <a name="exercise-1-selecting-sorting-and-displaying-data"></a>演習 1: データの選択、並べ替え、および表示
+## 演習 1:データの選択、並べ替え、表示
 
-### <a name="task-1-display-the-current-day-of-the-year"></a>タスク 1: 現在の日付を表示する
+### タスク 1: 現在の日付を表示する
 
 1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
-1. 検索結果で、 **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選択します。
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 検索結果で、**Windows PowerShell** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、**[管理者として実行]** を選択します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    help *date* 
@@ -41,7 +42,7 @@ lab:
    Get-Date | Select-Object -Property DayOfYear | fl
    ```
 
-### <a name="task-2-display-information-about-installed-hotfixes"></a>タスク 2: インストールされている修正プログラムに関する情報を表示する
+### タスク 2: インストールされている修正プログラムに関する情報を表示する
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -71,7 +72,7 @@ lab:
    Get-Hotfix | Select-Object –Property HotFixID,@{n='HotFixAge';e={(New-TimeSpan -Start $PSItem.InstalledOn).Days}},InstalledBy
    ```
 
-### <a name="task-3-display-a-list-of-available-scopes-from-the-dhcp-server"></a>タスク 3: DHCP サーバーから使用可能なスコープのリストを表示する
+### タスク 3: DHCP サーバーから使用可能なスコープのリストを表示する
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -102,7 +103,7 @@ lab:
    Get-DHCPServerv4Scope –ComputerName LON-DC1 | Select-Object –Property ScopeId,SubnetMask,Name | fl
    ```
 
-### <a name="task-4-display-a-sorted-list-of-enabled-windows-firewall-rules"></a>タスク 4: 有効な Windows ファイアウォール規則の並べ替えられたリストを表示する
+### タスク 4: 有効な Windows ファイアウォール規則の並べ替えられたリストを表示する
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -144,7 +145,7 @@ lab:
       Get-NetFirewallRule –Enabled True | Select-Object –Property DisplayName,Profile,Direction,Action | Sort-Object –Property Profile, DisplayName | ft -GroupBy Profile
       ```
 
-### <a name="task-5-display-a-sorted-list-of-network-neighbors"></a>タスク 5: ネットワーク近隣ノードの並べ替えられたリストを表示する
+### タスク 5: ネットワーク近隣ノードの並べ替えられたリストを表示する
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -179,7 +180,7 @@ lab:
       Get-NetNeighbor | Sort-Object –Property State | Select-Object –Property IPAddress,State | Format-Wide -GroupBy State -AutoSize
       ```
 
-### <a name="task-6-display-information-from-the-dns-name-resolution-cache"></a>タスク 6: DNS 名前解決キャッシュからの情報を表示する
+### タスク 6: DNS 名前解決キャッシュからの情報を表示する
 
 1. コンソールで、次のコマンドを入力して Enter キーを押します。
 
@@ -211,17 +212,18 @@ lab:
 
 1. 開いているすべてのウィンドウを閉じます。
 
-### <a name="exercise-1-results"></a>演習 1 の結果
+### 演習 1 の結果
 
 この演習を完了すると、環境からの管理情報を含むカスタム レポートがいくつか生成されているはずです。
 
-## <a name="exercise-2-filtering-objects"></a>演習 2: オブジェクトのフィルター処理
+## 演習 2: オブジェクトのフィルター処理
 
-### <a name="task-1-display-a-list-of-all-the-users-in-the-users-container-of-active-directory"></a>タスク 1: Active Directory の Users コンテナー内のすべてのユーザーのリストを表示する
+### タスク 1: Active Directory の Users コンテナー内のすべてのユーザーのリストを表示する
 
 1. **LON-CL1** で、**[スタート]** を選択してから、「**PowerShell**」と入力します。
-1. 検索結果で、 **[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、 **[管理者として実行]** を選択します。
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 検索結果で、**Windows PowerShell** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、**[管理者として実行]** を選択します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    help *user*
@@ -250,9 +252,10 @@ lab:
    Get-ADUser –Filter * -SearchBase "cn=Users,dc=Adatum,dc=com" | ft
    ```
 
-### <a name="task-2-create-a-report-displaying-the-security-event-log-entries-that-have-the-event-id-4624"></a>タスク 2:イベント ID 4624 のセキュリティ イベント ログ エントリを表示するレポートを作成する
+### タスク 2: イベント ID 4624 のセキュリティ イベント ログ エントリを表示するレポートを作成する
 
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-EventLog -LogName Security | 
@@ -275,9 +278,10 @@ lab:
    Select TimeWritten,EventID,Message -Last 10 | fl
    ```
 
-### <a name="task-3-display-a-list-of-the-encryption-certificates-installed-on-the-computer"></a>タスク 3: コンピューターにインストールされている暗号化証明書のリストを表示する
+### タスク 3: コンピューターにインストールされている暗号化証明書のリストを表示する
 
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-ChildItem -Path CERT: -Recurse
@@ -297,7 +301,7 @@ lab:
    Where HasPrivateKey -eq $False | Select-Object -Property FriendlyName,Issuer | fl
    ```
 
-   または
+   または:
 
    ```powershell
    Get-ChildItem -Path CERT: -Recurse | 
@@ -311,9 +315,10 @@ lab:
    Where { $PSItem.HasPrivateKey -eq $False -and $PSItem.NotAfter -gt (Get-Date) -and $PSItem.NotBefore -lt (Get-Date) } | Select-Object -Property NotBefore,NotAfter, FriendlyName,Issuer | ft -wrap
    ```
 
-### <a name="task-4-create-a-report-of-the-disk-volumes-that-are-running-low-on-space"></a>タスク 4: 領域が不足しているディスク ボリュームのレポートを作成する
+### タスク 4: 領域が不足しているディスク ボリュームのレポートを作成する
 
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-Volume
@@ -349,9 +354,10 @@ lab:
 
    > **注:** コンピューターの各ボリュームの空き領域が 10% を超える場合、このコマンドではラボ コンピューターに出力が生成されない可能性があります。
 
-### <a name="task-5-create-a-report-that-displays-specified-control-panel-items"></a>タスク 5: 指定されたコントロール パネル項目を表示するレポートを作成する
+### タスク 5: 指定されたコントロール パネル項目を表示するレポートを作成する
 
-1. **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
+1. 
+          **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    help *control* 
@@ -379,6 +385,6 @@ lab:
    Get-ControlPanelItem -Category 'System and Security' | Where-Object -FilterScript {-not ($PSItem.Category -notlike '*System and Security*')} | Sort Name
    ```
 
-### <a name="exercise-2-results"></a>演習 2 の結果
+### 演習 2 の結果
 
 この演習を完了すると、フィルター処理を使用して、指定されたデータと要素のみを含む管理情報のリストを生成したことになります。
