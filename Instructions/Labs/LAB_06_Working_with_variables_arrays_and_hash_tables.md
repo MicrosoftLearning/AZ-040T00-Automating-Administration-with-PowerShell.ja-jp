@@ -1,16 +1,16 @@
 ---
 lab:
-  title: 'ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する'
+  title: 'ラボ: PowerShell での変数、配列、ハッシュ テーブルの使用'
   module: 'Module 6: Working with variables, arrays, and hash tables'
 ---
 
-# <a name="lab-using-variables-arrays-and-hash-tables-in-powershell"></a>ラボ: PowerShell で変数、配列、ハッシュ テーブルを使用する
+# ラボ: PowerShell での変数、配列、ハッシュ テーブルの使用
 
-## <a name="scenario"></a>シナリオ
+## シナリオ
 
 組織内のサーバー管理を自動化するスクリプトを作成する準備をしています。 開始する前に、変数、配列、およびハッシュ テーブルを使用した操作を練習することもできます。
 
-## <a name="objectives"></a>目標
+## 目標
 
 このラボを完了すると、次のことができるようになります。
 
@@ -18,9 +18,9 @@ lab:
 - 配列を使用する。
 - ハッシュ テーブルを使用する。
 
-## <a name="estimated-time-45-minutes"></a>予想所要時間: 45 分
+## 予想所要時間: 45 分
 
-## <a name="lab-setup"></a>ラボのセットアップ
+## ラボのセットアップ
 
 仮想マシン: **AZ-040T00A-LON-DC1**、**AZ-040T00A-LON-SVR1**、および **AZ-040T00A-LON-CL1**
 
@@ -28,14 +28,14 @@ lab:
 
 パスワード: **Pa55w.rd**
 
-このラボでは、使用可能な仮想マシン環境を使います。 ラボを開始する前に、次の手順を行ってください。
+このラボでは、提供されている仮想マシン環境を使用します。 ラボを開始する前に、次の手順を行ってください。
 
-1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使用して **Adatum\\Administrator** としてサインインします。
-1. **LON-SVR1** と **LON-CL1** に対して手順 1 を繰り返し行います。
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
+1. **LON-SVR1** と **LON-CL1** に対して手順 1 を繰り返します。
 
-## <a name="exercise-1-working-with-variable-types"></a>演習 1: 変数型の使用
+## 演習 1:変数型の使用
 
-### <a name="exercise-scenario-1"></a>演習のシナリオ 1
+### 演習のシナリオ 1
 
 まず、さまざまな型の変数を使用した操作を練習します。
 
@@ -44,7 +44,7 @@ lab:
 1. 文字列変数を使用する。
 1. DateTime 変数を使用する。
 
-### <a name="task-1-use-string-variables"></a>タスク 1: 文字列変数を使用する
+### タスク 1: 文字列変数を使用する
 
 1. **LON-CL1** で、Windows PowerShell プロンプトを開きます。
 1. **C:\logs** を含む変数 `$logPath` を作成します。\.
@@ -54,7 +54,7 @@ lab:
 1. **C** ドライブではなく **D** ドライブを使用するように、`$logPath` に格納されているパスを更新します。
 1. 次のタスクのために、Windows PowerShell プロンプトを開いたままにします。
 
-### <a name="task-2-use-datetime-variables"></a>タスク 2: DateTime 変数を使用する
+### タスク 2: DateTime 変数を使用する
 
 1. Windows PowerShell プロンプトで、今日の日付を含む変数 `$today` を作成します。
 1. 変数 `$today` では、変数の型と使用可能なプロパティおよびメソッドを識別します。
@@ -63,9 +63,9 @@ lab:
 1. **Get-ADUser** を使用して、`$cutOffDay` 以降にサインインしたユーザー アカウントをクエリします。 **LastLogonDate** プロパティを使用してフィルター処理します。
 1. 次の演習のために、Windows PowerShell プロンプトを開いたままにします。
 
-## <a name="exercise-2-using-arrays"></a>演習 2: 配列の使用
+## 演習 2:配列の使用
 
-### <a name="exercise-scenario-2"></a>演習のシナリオ 2
+### 演習のシナリオ 2
 
 さまざまな型の変数を使用する練習ができたので、次は配列を操作します。
 
@@ -74,7 +74,7 @@ lab:
 1. 配列を使用してユーザーの部署を更新する。
 1. 配列リストを使用する。
 
-### <a name="task-1-use-an-array-to-update-the-department-for-users"></a>タスク 1: 配列を使用してユーザーの部署を更新する
+### タスク 1: 配列を使用してユーザーの部署を更新する
 
 1. **Marketing** 部門のすべての Active Directory Domain Services (AD DS) ユーザーに対してクエリを実行し、`$mktgUsers` という名前の変数に配置します。 **Department** プロパティを結果に含めます。
 1. マーケティング部門のユーザー数を特定するために `$mktgUsers` を使用します。
@@ -85,7 +85,7 @@ lab:
 1. **Business Development** 部門のすべての AD DS ユーザーにクエリを実行して、マーケティング部門の前の数と一致していることを確認します。
 1. 次のタスクのために、Windows PowerShell プロンプトを開いたままにします。
 
-### <a name="task-2-use-an-array-list"></a>タスク 2: 配列リストを使用する
+### タスク 2: 配列リストを使用する
 
 1. **LON-SRV1**、**LON-SRV2**、および **LON-DC1** の値を指定して、`$computers` という名前の配列リストを作成します。
 1. `$computers` のサイズが固定されていないことを確認します。
@@ -94,9 +94,9 @@ lab:
 1. `$computers` の内容を表示します。
 1. 次の演習のために、Windows PowerShell プロンプトを開いたままにします。
 
-## <a name="exercise-3-using-hash-tables"></a>演習 3: ハッシュ テーブルの使用
+## 演習 3:ハッシュ テーブルを使用する
 
-### <a name="exercise-scenario-3"></a>演習のシナリオ 3
+### 演習のシナリオ 3
 
 変数と配列を使用した後は、ハッシュ テーブルを使用した操作を練習します。 ハッシュ テーブルを使用した操作方法は、配列や配列リストとは異なります。
 
@@ -104,7 +104,7 @@ lab:
 
 - ハッシュ テーブルを使用する。
 
-### <a name="task-1-use-a-hash-table"></a>タスク 1: ハッシュ テーブルを使用する
+### タスク 1: ハッシュ テーブルを使用する
 
 1. 次のユーザーと電子メール アドレスを使用して、`$mailList` という名前のハッシュ テーブルを作成します。
 

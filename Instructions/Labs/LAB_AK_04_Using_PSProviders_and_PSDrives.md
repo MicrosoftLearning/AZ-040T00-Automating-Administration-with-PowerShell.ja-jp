@@ -1,32 +1,32 @@
 ---
 lab:
-  title: 'ラボ: PowerShell での PSProviders と PSDrives の使用'
+  title: 'ラボ: PowerShell での PSProvider と PSDrive の使用'
   type: Answer Key
   module: 'Module 4: Using PSProviders and PSDrives'
 ---
 
-# <a name="lab-answer-key-using-psproviders-and-psdrives-with-powershell"></a>ラボの回答キー: PowerShell での PSProviders と PSDrives の使用
+# ラボの回答キー: PowerShell での PSProviders と PSDrives の使用
 
-## <a name="exercise-1-creating-files-and-folders-on-a-remote-computer"></a>演習 1: リモート コンピューターでのファイルとフォルダーの作成
+## 演習 1:リモート コンピューターでのファイルとフォルダーの作成
 
-### <a name="task-1-create-a-new-folder-on-a-remote-computer"></a>タスク 1: リモート コンピューターに新しいフォルダーを作成する
+### タスク 1: リモート コンピューターに新しいフォルダーを作成する
 
 1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
-1. 結果リストで、**Windows PowerShell** を右クリックするか、コンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
-1. 別のウィンドウで、**New-Item** コマンドレットのヘルプを確認するには、 **[管理者:Windows PowerShell]** コンソールで、次のコマンドを入力し、Enter キーを押します。
+1. 結果リストで、**Windows PowerShell** を右クリックするか、コンテキスト メニューをアクティブにして、**[管理者として実行]** を選択します。
+1. **New-Item** コマンドレットのヘルプを別のウィンドウで確認するには、**管理者: Windows PowerShell** コンソールで、以下のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    Get-Help New-Item –ShowWindow
    ```
 
-1. **Get-Help** の出力で、 *–Name* と *–ItemType* パラメーターを確認してから、サンプル コマンドを確認して、**New-Item Help** ウィンドウを閉じます。
+1. **Get-Help** の出力で、*–Name* と *–ItemType* パラメーターを確認してから、サンプル コマンドを確認して、**New-Item Help** ウィンドウを閉じます。
 1. **\\\\Lon-Svr1\\C$\\** に新しい **ScriptShare** フォルダーを作成するには、コンソールで次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
    New-Item –Path \\Lon-Svr1\C$\ –Name ScriptShare –ItemType Directory
    ```
 
-### <a name="task-2-create-a-new-psdrive-mapping-to-the-remote-file-folder"></a>タスク 2: リモート ファイル フォルダーへの新しい PSDrive マッピングを作成する
+### タスク 2: リモート ファイル フォルダーへの新しい PSDrive マッピングを作成する
 
 1. **New-PSDrive** コマンドレットのヘルプを表示するには、次のコマンドを入力し、Enter キーを押します。
 
@@ -36,7 +36,7 @@ lab:
 
 1. 次の情報を確認してから、**New-PSDrive Help** ウィンドウを閉じます。
     - ヘルプ情報
-    - *–Name*、 *–Root*、および *–PSProvider* パラメーター
+    - *–Name*、*–Root*、および *–PSProvider* パラメーター
     - コマンドの例
 
 1. 新しい PSDrive マッピングを作成するには、次のコマンドを入力して、Enter キーを押します。
@@ -45,7 +45,7 @@ lab:
    New-PSDrive –Name ScriptShare –Root \\Lon-Svr1\c$\ScriptShare –PSProvider FileSystem
    ```
 
-### <a name="task-3-create-a-file-on-the-mapped-drive"></a>タスク 3: マップされたドライブにファイルを作成する
+### タスク 3: マップされたドライブにファイルを作成する
 
 1. **Set-Location** コマンドレットのヘルプを確認するには、次のコマンドを入力して、Enter キーを押します。
 
@@ -53,7 +53,7 @@ lab:
    Get-Help Set-Location –ShowWindow
    ```
 
-1. ヘルプ情報を確認してから、 **[Set-Location ヘルプ]** ウィンドウを閉じます。
+1. ヘルプ情報を確認してから、**[Set-Location ヘルプ]** ウィンドウを閉じます。
 1. ScriptShare: の場所を変更するには、次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
@@ -74,9 +74,9 @@ lab:
 
 1. **script.txt** ファイルが一覧に表示されていることを確認します。
 
-## <a name="exercise-2-creating-a-registry-key-for-your-future-scripts"></a>演習 2: 今後のスクリプトのためのレジストリ キーの作成
+## 演習 2:後で使用するスクリプトのためのレジストリ キーの作成
 
-### <a name="task-1-create-the-registry-key-to-store-script-configurations"></a>タスク 1: スクリプト構成を格納するレジストリ キーを作成する
+### タスク 1: スクリプト構成を格納するレジストリ キーを作成する
 
 1. **Software** レジストリ キーの内容を確認するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -90,7 +90,7 @@ lab:
    New-Item –Path HKCU:\Software –Name Scripts
    ```
 
-### <a name="task-2-create-a-new-registry-value-to-store-the-name-of-the-psdrive"></a>タスク 2:PSDrive の名前を格納する新しいレジストリ値を作成する
+### タスク 2: PSDrive の名前を格納する新しいレジストリ値を作成する
 
 1. 場所を **HKCU:\Software\Scripts** に変更するには、次のコマンドを入力して、Enter キーを押します。
 
@@ -110,9 +110,9 @@ lab:
    Get-ItemProperty . -Name PSDriveName
    ```
 
-## <a name="exercise-3-creating-a-new-active-directory-group"></a>演習 3: 新しい Active Directory グループの作成
+## 演習 3:新しい Active Directory グループの作成
 
-### <a name="task-1-create-a-psdrive-that-maps-to-the-users-container-in-ad-ds"></a>タスク 1: AD DS の Users コンテナーにマップする PSDrive を作成する
+### タスク 1: AD DS の Users コンテナーにマップする PSDrive を作成する
 
 1. **ActiveDirectory** モジュールを読み込むには、**Windows PowerShell** コンソールで、次のコマンドを入力し、Enter キーを押します。
 
@@ -132,7 +132,7 @@ lab:
    Set-Location AdatumUsers:
    ```
 
-### <a name="task-2-create-the-london-developers-group"></a>タスク 2: ロンドンの開発者グループを作成する
+### タスク 2: ロンドンの開発者グループを作成する
 
 1. ロンドンの開発者グループを作成するには、次のコマンドを入力して、Enter キーを押します。
 

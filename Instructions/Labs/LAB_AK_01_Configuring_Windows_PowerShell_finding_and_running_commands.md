@@ -23,7 +23,7 @@ lab:
 
    a.   **Windows PowerShell** コンソール ウィンドウの左上隅にあるコントロール ボックスを選びます。
 
-   b.   **[プロパティ]** を選択します。
+   b.   **プロパティ**を選択します。
 
    c.    **[Windows PowerShell のプロパティ]** ダイアログ ボックスで **[フォント]** タブを選び、**[フォント]** リストから **[Consolas]** を選びます。
 
@@ -101,13 +101,13 @@ lab:
    Get-Help *resolve* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *resolve* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command -Verb resolve 
@@ -121,19 +121,19 @@ lab:
    Get-Help *adapter* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *adapter* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command -Noun *adapter*
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command -Verb Set -Noun *adapter* 
@@ -149,13 +149,13 @@ lab:
    Get-Help *sched* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *sched* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Module *sched* -ListAvailable
@@ -169,7 +169,7 @@ lab:
    Get-Command –Verb Block 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Help *block* 
@@ -193,13 +193,13 @@ lab:
    Get-Help *cache* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *cache* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command -Verb clear
@@ -213,19 +213,19 @@ lab:
    Get-Help *firewall*
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *firewall* 
    ```
 
-   または
+   または:
 
    ```ps
    Get-Help *rule*
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command *rule* 
@@ -263,7 +263,7 @@ lab:
    Get-Alias Type
    ```
 
-   または
+   または:
 
    ```ps
    Get-Command –Noun *content* 

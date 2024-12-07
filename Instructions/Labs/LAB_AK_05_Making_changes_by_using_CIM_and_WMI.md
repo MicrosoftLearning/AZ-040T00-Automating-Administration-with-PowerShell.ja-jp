@@ -1,18 +1,18 @@
 ---
 lab:
-  title: 'ラボ: WMI と CIM を使って情報についてのクエリを実行する'
+  title: 'ラボ: WMI と CIM を使った情報のクエリ'
   type: Answer Key
   module: 'Module 5: Querying management information by using CIM and WMI'
 ---
 
-# <a name="lab-answer-key-querying-information-by-using-wmi-and-cim"></a>ラボの回答キー: WMI と CIM を使った情報のクエリ
+# ラボ回答キー: WMI と CIM を使用した情報の照会
 
-## <a name="exercise-1-querying-information-by-using-wmi"></a>演習 1: WMI を使った情報のクエリ
+## 演習 1:WMI を使用した情報の照会
 
-### <a name="task-1-query-ip-addresses"></a>タスク 1: IP アドレスのクエリを実行する
+### タスク 1: IP アドレスのクエリを実行する
 
 1. **LON-CL1** で、**[スタート]** を選択して、「**powersh**」と入力します。
-1. 結果の一覧で、 **[Windows PowerShell]** を右クリックするか、またはそのコンテキスト メニューをアクティブにして、 **[管理者として実行]** を選択します。
+1. 結果リストで、**[Windows PowerShell]** を右クリックするか、そのコンテキスト メニューをアクティブにしてから、**[管理者として実行]** を選択します。
 1. コンピューターで使用されている IP アドレスを一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
@@ -29,7 +29,7 @@ lab:
 
    最初のコマンドを実行し、パイプを使用してその出力を **Get-Member** に渡し、使用可能なプロパティを確認できます。
 
-### <a name="task-2-query-operating-system-version-information"></a>タスク 2: オペレーティング システムのバージョン情報をクエリする
+### タスク 2: オペレーティング システムのバージョン情報のクエリを実行する
 
 1. オペレーティング システム情報を一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -55,7 +55,7 @@ lab:
 
    
 
-### <a name="task-3-query-computer-system-hardware-information"></a>タスク 3: コンピューター システムのハードウェア情報をクエリする
+### タスク 3: コンピューター システムのハードウェア情報のクエリを実行する
 
 1. コンピューター システム情報を表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -80,7 +80,7 @@ lab:
    ```
 
 
-### <a name="task-4-query-service-information"></a>タスク 4: サービス情報をクエリする
+### タスク 4: サービス情報のクエリを実行する
 
 1. サービスについての情報を含むリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
     
@@ -104,9 +104,9 @@ lab:
    
 1. 次の演習のために、**Windows PowerShell** コンソールを開いたままにします。
 
-## <a name="exercise-2-querying-information-by-using-cim"></a>演習 2: CIM を使った情報のクエリ
+## 演習 2:CIM を使用した情報の照会
 
-### <a name="task-1-query-user-accounts"></a>タスク 1: ユーザー アカウントをクエリする
+### タスク 1: ユーザー アカウントのクエリを実行する
 
 1. ユーザー アカウントを一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
    
@@ -130,7 +130,7 @@ lab:
    
    返されたすべてのドメインおよびローカル アカウントの一覧に注目してください。
 
-### <a name="task-2-query-bios-information"></a>タスク 2: BIOS 情報をクエリする
+### タスク 2: BIOS 情報をクエリする
 
 1. BIOS 情報を含むリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -146,7 +146,7 @@ lab:
     Get-CimInstance -Class Win32_BIOS
     ```    
 
-### <a name="task-3-query-network-adapter-configuration-information"></a>タスク 3: ネットワーク アダプターの構成情報をクエリする
+### タスク 3: ネットワーク アダプターの構成情報をクエリする
 
 1. すべてのローカル `Win32_NetworkAdapterConfiguration` インスタンスの一覧を表示するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
    
@@ -160,7 +160,7 @@ lab:
    Get-CimInstance -Classname Win32_NetworkAdapterConfiguration -ComputerName LON-DC1
    ```
 
-### <a name="task-4-query-user-group-information"></a>タスク 4: ユーザー グループ情報をクエリする
+### タスク 4: ユーザー グループ情報のクエリを実行する
 
 1. ユーザー グループを一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
 
@@ -178,9 +178,9 @@ lab:
 
 1. 次の演習のために、**Windows PowerShell** コンソールを開いたままにします。
 
-## <a name="exercise-3-invoking-methods"></a>演習 3: メソッドの呼び出し
+## 演習 3:メソッドの呼び出し
 
-### <a name="task-1-invoke-a-cim-method"></a>タスク 1: CIM メソッドを呼び出す
+### タスク 1: CIM メソッドを呼び出す
 
 1. **LON-DC1** を再起動するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
    
@@ -191,7 +191,7 @@ lab:
 1. **LON-DC1** 仮想マシンに切り替えて、再起動を確認します。
 1. 再起動が完了したら、**LON-CL1** 仮想マシンに戻ります。
 
-### <a name="task-2-invoke-a-wmi-method"></a>タスク 2: WMI メソッドを呼び出す
+### タスク 2: WMI メソッドを呼び出す
 
 1. WinRM サービスのプロパティを確認するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
     
