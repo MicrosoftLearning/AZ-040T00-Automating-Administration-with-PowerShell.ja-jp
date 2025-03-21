@@ -37,19 +37,17 @@ lab:
 
 ### シナリオ 1
 
-ご自分の試用版の Azure サブスクリプションがアクティブで、Az module for Windows PowerShell をインストールしていることを確認する必要があります。
+自分の環境で提供されている Azure サブスクリプションにサインインし、Windows PowerShell 用の AZ モジュールをインストールする必要があります。
 
 この演習の主なタスクは次のとおりです。
 
-1. Azure Pass のバウチャーを使用して Azure サブスクリプションをアクティブにする。
+1. Azure サブスクリプションにサインインします。
 1. Azure Az module for PowerShell をインストールする。
 
-### タスク 1: Azure Pass のバウチャーを使用して Azure サブスクリプションをアクティブにする
+### タスク 1: Azure サブスクリプションにサインインする
 
-1. **LON-CL1** で Microsoft Edge ブラウザーを開き、**https://www.microsoftazurepass.com/** に移動します。
-1. 試用版の Azure サブスクリプションに使用する Microsoft アカウントでサインインします。
-1. インストラクターまたはラボ ホスティング プロバイダーによって提供される Azure Pass コードを使用します。
-1. **[サブスクリプション]** ページに、**[Azure Pass - スポンサーシップ]** が **[アクティブ]** の状態で表示され、50 米国ドルの残高があることを確認します。
+1. **LON-CL1** で Microsoft Edge ブラウザーを開き、**https://portal.azure.com/** に移動します。
+1. 講師から提供された資格情報を使用してサインインします。
 
 ### タスク 2: Azure Az module for PowerShell をインストールする
 
