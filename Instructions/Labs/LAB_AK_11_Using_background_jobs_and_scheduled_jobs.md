@@ -5,7 +5,7 @@ lab:
   module: 'Module 11: Using background jobs and scheduled jobs'
 ---
 
-# ラボの回答キー : PowerShell を使用したジョブ管理
+# PowerShell を使用したジョブ管理
 
 ## 演習 1:ジョブの開始と管理
 

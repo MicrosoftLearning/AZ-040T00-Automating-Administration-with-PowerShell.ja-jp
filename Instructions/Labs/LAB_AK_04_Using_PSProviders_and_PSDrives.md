@@ -5,7 +5,7 @@ lab:
   module: 'Module 4: Using PSProviders and PSDrives'
 ---
 
-# ラボの回答キー: PowerShell での PSProviders と PSDrives の使用
+# PowerShell での PSProvider と PSDrive の使用
 
 ## 演習 1:リモート コンピューターでのファイルとフォルダーの作成
 

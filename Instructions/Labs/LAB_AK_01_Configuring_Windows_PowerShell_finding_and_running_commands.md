@@ -1,11 +1,11 @@
 ---
 lab:
-  title: 'ラボの回答キー: Windows PowerShell の構成と、コマンドの検出および実行'
+  title: 'ラボ: Windows PowerShell の構成、コマンドの検出と実行'
   type: Answer Key
   module: 'Module 1: Getting Started with Windows PowerShell'
 ---
 
-# ラボの回答キー: Windows PowerShell の構成と、コマンドの検出および実行
+# Windows PowerShell の構成、コマンドの検出と実行
 
 ## 演習 1:Windows PowerShell コンソール アプリケーションの構成
 

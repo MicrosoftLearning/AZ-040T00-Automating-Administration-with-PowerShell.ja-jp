@@ -5,7 +5,7 @@ lab:
   module: 'Module 5: Querying management information by using CIM and WMI'
 ---
 
-# ラボ回答キー: WMI と CIM を使用した情報の照会
+# WMI と CIM を使った情報のクエリ
 
 ## 演習 1:WMI を使用した情報の照会
 

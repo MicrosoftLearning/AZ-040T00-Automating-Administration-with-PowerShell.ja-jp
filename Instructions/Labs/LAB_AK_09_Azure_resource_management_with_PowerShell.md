@@ -5,7 +5,7 @@ lab:
   module: 'Module 9: Managing Azure resources with PowerShell'
 ---
 
-# ラボの回答キー: PowerShell を使用した Azure リソース管理
+# PowerShell を使用した Azure リソース管理
 
 ## 演習 1:Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
 
