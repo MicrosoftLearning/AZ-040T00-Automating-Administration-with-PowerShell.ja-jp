@@ -5,7 +5,7 @@ lab:
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
 ---
 
-# ラボの回答キー: PowerShell を使用した Microsoft 365 の管理
+# PowerShell を使用した Microsoft 365 の管理
 
 ## 演習 1:Microsoft Entra ID でユーザーとグループを管理する
 

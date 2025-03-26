@@ -5,7 +5,7 @@ lab:
   module: 'Module 6: Working with variables, arrays, and hash tables'
 ---
 
-# ラボの回答キー: PowerShell で変数、配列、ハッシュ テーブルを使用する
+# PowerShell での変数、配列、ハッシュ テーブルの使用
 
 ## 演習 1:変数型の使用
 

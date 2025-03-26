@@ -5,7 +5,7 @@ lab:
   module: 'Module 8: Administering remote computers with Windows PowerShell'
 ---
 
-# ラボの応答キー: PowerShell を使用したリモート管理の実行
+# PowerShell を使用したリモート管理の実行
 
 ## 演習 1:ローカル コンピューターでのリモート処理の有効化
 

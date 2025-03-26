@@ -5,7 +5,7 @@ lab:
   module: 'Module 3: Working with the Windows PowerShell pipeline'
 ---
 
-# ラボ回答キー: PowerShell パイプラインの使用
+# PowerShell パイプラインの使用
 
 ## 演習 1:オブジェクトの列挙
 

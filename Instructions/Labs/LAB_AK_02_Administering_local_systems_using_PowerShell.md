@@ -5,7 +5,7 @@ lab:
   module: 'Module 2: Windows PowerShell for local systems administration'
 ---
 
-# ラボ回答キー: PowerShell を使用したローカル システム管理の実行
+# PowerShell を使用したローカル システム管理の実行
 
 ## 演習 1:Active Directory オブジェクトの作成と管理
 
