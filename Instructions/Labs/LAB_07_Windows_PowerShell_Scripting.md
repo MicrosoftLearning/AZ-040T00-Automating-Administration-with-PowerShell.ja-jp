@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'ラボ: PowerShell でのスクリプトの使用'
-  module: 'Module 4: Windows PowerShell scripting'
+  module: 'Module 7: Windows PowerShell scripting'
 ---
 
 # ラボ: PowerShell でのスクリプトの使用
