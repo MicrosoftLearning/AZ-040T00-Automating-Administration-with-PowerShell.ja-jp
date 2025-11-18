@@ -63,7 +63,7 @@ lab:
 1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
    - 表示名: **Noreen Riggs**
    - ユーザー プリンシパル名: **Noreen@$verifiedDomain**
-   - Account enabled
+   - 有効なアカウント
    - MailNickName: **Noreen**
 1. グローバル管理者ロールを **Noreen Riggs** ユーザー アカウントに割り当てます。
 1. **Get-AzureADDirectoryRoleMember** コマンドレットを使用して、グローバル管理者ロールが **Noreen Riggs** ユーザー アカウントに割り当てられていることを確認します。
@@ -73,11 +73,11 @@ lab:
 1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
    - 表示名: **Allan Yoo**
    - ユーザー プリンシパル名: **Allan@$verifiedDomain**
-   - Account enabled
+   - 有効なアカウント
    - MailNickName: **Allan**
 1. Allan Yoo の利用場所を **[US]** に設定します。
 1. テナントで使用可能なライセンス SKU を一覧表示します。
-1. **AssignedLicense** オブジェクトを作成し、テナントの **ENTERPRISEPREMIUM** ライセンスの *SkuID* 値を使用して、**SkuId** プロパティを構成します。
+1. **AssignedLicense** オブジェクトを作成し、テナントの **Office_365_E5_(no_Teams)** ライセンスの *SkuID* 値を使用して、**SkuId** プロパティを構成します。
 1. **AssignedLicenses** オブジェクトを作成し、**AssignedLicense** オブジェクトを **AddLicenses** プロパティに配置します。
 1. **AssignedLicenses** オブジェクトを使用して、Allan Yoo にライセンスを割り当てます。
 
