@@ -87,7 +87,7 @@ lab:
           **[管理者:Windows PowerShell]** ウィンドウで、次のコマンドを入力し、Enter キーを押します。
 
    ```powershell
-   Test-Connection LON-DC1
+   Test-NetConnection LON-DC1
    ```
 
 > **注:** テスト結果は、顕著な遅延なしに返される必要があります。 この演習で、この応答時間と、ネットワーク構成を変更した後のそれを比較します。

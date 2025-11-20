@@ -134,34 +134,7 @@ PowerShell スクリプト実行ポリシーは、リモート署名または制
 1. 目的のライセンスの SKU ID を変数内に格納するには、次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
-   $SkuId = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "ENTERPRISEPREMIUM" }).SkuId
-   ```
-
-1. **AssignedLicense** オブジェクトを作成するには、次のコマンドを入力して、Enter キーを押します。
-
-   ```powershell
-   $License = New-Object -TypeName PSCustomObject -Property @{
-    DisabledPlans = @()
-    SkuId = $SkuId
-   }
-   ```
-
-1. ライセンス オブジェクトに SKU ID を追加するには、次のコマンドを入力して、Enter キーを押します。
-
-   ```powershell
-   $License.SkuId = $SkuId 
-   ```
-
-1. **AssignedLicenses** オブジェクトを作成するには、次のコマンドを入力して、Enter キーを押します。
-
-   ```powershell
-   $LicensesToAssign = @($License)  
-   ```
-
-1. **AddLicenses** プロパティに **AssignedLicense** オブジェクトを追加するには、次のコマンドを入力して、Enter キーを押します。
-
-   ```powershell
-   $LicensesToAssign += $License
+   $SkuId = (Get-MgSubscribedSku | Where-Object { $_.SkuPartNumber -eq "Office_365_E5_(no_Teams)" }).SkuId
    ```
 
 1. Allan のユーザー オブジェクトに **AssignedLicenses** オブジェクトを構成するには、次のコマンドを入力して、Enter キーを押します。
