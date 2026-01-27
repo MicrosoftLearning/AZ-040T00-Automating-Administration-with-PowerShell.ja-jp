@@ -7,6 +7,8 @@ lab:
 
 # PowerShell を使用した Microsoft 365 の管理
 
+このラボは完了するまで、約 **60** 分かかります。
+
 ## 演習 1:Microsoft Entra ID でユーザーとグループを管理する
 
 ### タスク 1:Microsoft Entra ID に接続する

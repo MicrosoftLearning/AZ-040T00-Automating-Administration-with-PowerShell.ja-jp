@@ -6,6 +6,8 @@ lab:
 
 # ラボ: PowerShell を使った Azure リソースの管理
 
+このラボは完了するまで、約 **60** 分かかります。
+
 ## シナリオ
 
 あなたは Adatum Corporation のロンドン ブランチ オフィスのシステム管理者です。 会社の仮想マシン (VM) とその他のリソースを実行するため、Microsoft Azure プラットフォームを評価する必要があります。 評価の一環として、Azure ベースのリソースの PowerShell 管理もテストする必要があります。
@@ -17,8 +19,6 @@ lab:
 - Az module for Windows PowerShell をインストールする。
 - Azure Cloud Shell 環境を実行して使用する。
 - PowerShell を使用して Azure VM とディスクを管理する。
-
-## 予想所要時間: 60 分
 
 ## ラボのセットアップ
 

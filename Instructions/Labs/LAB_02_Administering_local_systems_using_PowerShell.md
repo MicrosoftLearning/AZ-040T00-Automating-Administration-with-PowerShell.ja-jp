@@ -6,6 +6,8 @@ lab:
 
 # ラボ: PowerShell を使用したローカル システム管理の実行
 
+このラボは完了するまで、約 **60** 分かかります。
+
 ## シナリオ
 
 あなたは、Adatum Corporation のサーバー サポート チームで働いています。 最初の業務の 1 つは、新しいブランチ オフィスのインフラストラクチャ サービスを構成する方法です。 Windows PowerShell を使用してタスクを完了することに決定しました。
@@ -17,8 +19,6 @@ lab:
 - Windows PowerShell を使用して Active Directory オブジェクトを作成して管理する。
 - Windows PowerShell を使用して、Windows Server でネットワーク設定を構成する。
 - Windows PowerShell を使用して、インターネット インフォメーション サービス (IIS) Web サイトを作成します。
-
-## 予想所要時間: 60 分
 
 ## ラボのセットアップ
 

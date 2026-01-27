@@ -6,6 +6,8 @@ lab:
 
 # ラボ: PowerShell を使用した Microsoft 365 の管理
 
+このラボは完了するまで、約 **60** 分かかります。
+
 ## シナリオ
 
 新しい Microsoft 365 テナントを作成しました。 新しい管理者として、ユーザーへの展開を開始する前に、PowerShell を使用して一部の Microsoft 365 サービスを管理してみたいと思っています。
@@ -18,8 +20,6 @@ lab:
 - Exchange Online を管理する。
 - SharePoint Online の管理。
 - Microsoft Teams を管理する。
-
-## 予想所要時間: 60 分
 
 ## ラボのセットアップ
 
