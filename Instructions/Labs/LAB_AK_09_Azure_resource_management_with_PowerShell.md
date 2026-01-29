@@ -7,6 +7,8 @@ lab:
 
 # PowerShell を使用した Azure リソース管理
 
+このラボは完了するまで、約 **60** 分かかります。
+
 ## 演習 1:Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
 
 #### タスク 1: Azure portal を開く
