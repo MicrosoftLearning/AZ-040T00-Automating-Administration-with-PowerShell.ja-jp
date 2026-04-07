@@ -2,6 +2,14 @@
 lab:
   title: 'ラボ B:PowerShell パイプラインの使用'
   module: 'Module 3: Working with the Windows PowerShell pipeline'
+  description: 列挙手法を使って、パイプラインで複数のオブジェクトを操作します。 列挙するタイミングを選び、オブジェクトの出力形式を変換して、多数のレコードでデータを更新します。
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - PowerShell Pipeline
+    - Enumeration
+    - Object Conversion
 ---
 
 # ラボ: PowerShell パイプラインの使用

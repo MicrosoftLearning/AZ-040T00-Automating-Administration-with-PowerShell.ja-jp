@@ -3,6 +3,15 @@ lab:
   title: 'ラボ: PowerShell を使用したローカル システム管理の実行'
   type: Answer Key
   module: 'Module 2: Windows PowerShell for local systems administration'
+  description: 組織単位、グループ、ユーザー アカウントとコンピューター アカウントなどの Active Directory オブジェクトを作成して管理します。 また、PowerShell を使って、ネットワーク設定を構成し、IIS Web サイトを作成します。
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Active Directory
+    - Networking
+    - IIS
+    - PowerShell
 ---
 
 # PowerShell を使用したローカル システム管理の実行

@@ -2,6 +2,15 @@
 lab:
   title: 'ラボ: PowerShell での変数、配列、ハッシュ テーブルの使用'
   module: 'Module 6: Working with variables, arrays, and hash tables'
+  description: PowerShell の変数、配列、ハッシュ テーブルを使って、スクリプト データを整理します。 コレクションの動作を比較し、各タスクに適した構造を選びます。
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Variables
+    - Arrays
+    - Hash Tables
+    - PowerShell
 ---
 
 # ラボ: PowerShell での変数、配列、ハッシュ テーブルの使用

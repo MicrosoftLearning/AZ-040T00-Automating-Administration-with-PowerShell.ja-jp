@@ -2,6 +2,14 @@
 lab:
   title: 'ラボ A:PowerShell パイプラインの使用'
   module: 'Module 3: Working with the Windows PowerShell pipeline'
+  description: PowerShell パイプラインを使って、レポート用にシステム データの選択、並べ替え、書式設定、フィルター処理を行います。 基本と高度の両方のフィルター処理構文を適用して、関連するオブジェクトのみを返します。
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - PowerShell Pipeline
+    - Object Filtering
+    - Output Formatting
 ---
 
 # ラボ: PowerShell パイプラインの使用

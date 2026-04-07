@@ -3,6 +3,16 @@ lab:
   title: 'ラボ: PowerShell を使用した Microsoft 365 の管理'
   type: Answer Key
   module: 'Module 10: Managing Microsoft 365 services with PowerShell'
+  description: ID とコラボレーションのワークロード全体で、PowerShell を使って Microsoft 365 サービスを管理します。 Azure AD または Entra ID でユーザーとグループを管理し、Exchange Online、SharePoint Online、Teams で主要なタスクを実行します。
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft Entra ID
+    - Exchange Online
+    - SharePoint Online
+    - Microsoft Teams
 ---
 
 # PowerShell を使用した Microsoft 365 の管理

@@ -2,7 +2,15 @@
 lab:
   title: 'ラボ: Windows PowerShell の構成、コマンドの検出と実行'
   module: 'Module 1: Getting Started with Windows PowerShell'
---- 
+  description: 日常的な管理用に Windows PowerShell コンソールと ISE アプリケーションを構成します。 ヘルプとバージョン情報のトピックを使って、コマンドを見つけて実行し、基本的なシェル スキルを習得します。
+  duration: 60 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - PowerShell
+    - Command Discovery
+    - Help System
+---
 
 # ラボ: Windows PowerShell の構成、コマンドの検出と実行
 
