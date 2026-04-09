@@ -2,6 +2,15 @@
 lab:
   title: 'ラボ: PowerShell での PSProvider と PSDrive の使用'
   module: 'Module 4: Using PSProviders and PSDrives'
+  description: PSProvider と PSDrive を使って、ファイル システム、レジストリ、Active Directory を操作します。 プロバイダーに基づくパスを作成し、スクリプトの構成をレジストリに格納して、プロバイダー ナビゲーションを介したオブジェクト アクセスを検証します。
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - PSProviders
+    - PSDrives
+    - Registry
+    - Active Directory
 ---
 
 # ラボ: PowerShell での PSProvider と PSDrive の使用

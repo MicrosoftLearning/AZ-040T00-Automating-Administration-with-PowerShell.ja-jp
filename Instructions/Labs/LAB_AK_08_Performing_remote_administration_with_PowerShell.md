@@ -3,6 +3,14 @@ lab:
   title: 'ラボ: PowerShell を使用したリモート管理の実行'
   type: Answer Key
   module: 'Module 8: Administering remote computers with Windows PowerShell'
+  description: 1 対 1 と 1 対多の管理のために PowerShell リモート処理を有効にして使用します。 永続的なセッションを作成し、複数のコンピューターでコマンドを並列に実行します。
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - PowerShell Remoting
+    - PSSession
+    - Invoke-Command
 ---
 
 # PowerShell を使用したリモート管理の実行

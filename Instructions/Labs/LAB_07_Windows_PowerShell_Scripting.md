@@ -2,6 +2,15 @@
 lab:
   title: 'ラボ: PowerShell でのスクリプトの使用'
   module: 'Module 7: Windows PowerShell scripting'
+  description: ループ、条件付きロジック、CSV によるアカウント作成を含む PowerShell スクリプトを作成して実行します。 コード署名と実行ポリシーの概念を適用した後、リモート ディスク クエリのための代替資格情報のサポートを追加します。
+  duration: 150 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - PowerShell Scripting
+    - Code Signing
+    - CSV
+    - Credential Management
 ---
 
 # ラボ: PowerShell でのスクリプトの使用

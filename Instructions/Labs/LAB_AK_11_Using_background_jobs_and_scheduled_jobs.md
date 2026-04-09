@@ -3,6 +3,14 @@ lab:
   title: 'ラボ: PowerShell を使用したジョブ管理'
   type: Answer Key
   module: 'Module 11: Using background jobs and scheduled jobs'
+  description: 非同期オートメーションのために PowerShell のバックグラウンド ジョブとスケジュールされたジョブを作成および管理します。 ジョブの実行を監視し、反復可能な管理のために定期的なタスクを構成します。
+  duration: 15 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Background Jobs
+    - Scheduled Jobs
+    - Automation
 ---
 
 # PowerShell を使用したジョブ管理

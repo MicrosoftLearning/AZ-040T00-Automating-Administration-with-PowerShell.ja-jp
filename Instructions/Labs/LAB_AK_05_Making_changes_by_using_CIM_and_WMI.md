@@ -3,6 +3,14 @@ lab:
   title: 'ラボ: WMI と CIM を使った情報のクエリ'
   type: Answer Key
   module: 'Module 5: Querying management information by using CIM and WMI'
+  description: WMI と CIM 両方のコマンドレットを使って、システム情報のクエリを実行します。 関連するクラスを検出し、結果をフィルター処理して、管理タスクのリポジトリ メソッドを呼び出します。
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - WMI
+    - CIM
+    - PowerShell
 ---
 
 # WMI と CIM を使った情報のクエリ

@@ -2,6 +2,15 @@
 lab:
   title: 'ラボ: PowerShell を使った Azure リソースの管理'
   module: 'Module 9: Managing Azure resources with PowerShell'
+  description: Az モジュールと Azure Cloud Shell を使って、PowerShell で Azure リソースを管理します。 リソース グループ、仮想マシン、ディスクを作成して管理した後、デプロイされたリソースを削除します。
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure
+    - Az Module
+    - Virtual Machines
+    - Cloud Shell
 ---
 
 # ラボ: PowerShell を使った Azure リソースの管理
