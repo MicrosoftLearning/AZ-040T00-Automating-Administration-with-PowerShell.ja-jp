@@ -92,6 +92,8 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 
 ## 演習 2:Windows PowerShell ISE アプリケーションの構成
 
+> **注:** Windows PowerShell ISE は Windows PowerShell 5.1 でのみ使用できます。 これは、アクティブな機能開発の対象ではなくなったため、PowerShell 7 でもサポートされていません。 Microsoft は、最新のスクリプト環境として **PowerShell 拡張機能付きの Visual Studio Code** を推奨しています。 この演習では、Windows PowerShell 5.1 を搭載した Windows 10/11 システム上で引き続き利用可能な ISE が使用されます。
+
 ### 演習のシナリオ 2
 
 この演習では、Windows PowerShell ISE アプリケーションの外観をカスタマイズします。
@@ -158,6 +160,8 @@ Windows PowerShell をカスタマイズするには、最初にコンソール�
 5. **LON-DC1** へのネットワーク接続をテストします。 このコマンドでは、True または False の値のみが返され、他の出力は含まれません。
 
 6. ローカル セキュリティ イベント ログから最新の 10 個のエントリを表示します。
+
+   > **注:** `Get-EventLog` コマンドレットは、Windows PowerShell 5.1 でのみ使用できます。 PowerShell 7 では、`-Newest` の代わりに `Get-WinEvent` と `-MaxEvents` パラメーターを使用してください。
 
 ### 演習 3 の結果
 

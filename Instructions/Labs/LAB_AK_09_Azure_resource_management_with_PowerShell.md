@@ -18,7 +18,41 @@ lab:
 
 このラボは完了するまで、約 **60** 分かかります。
 
+## シナリオ
+
+あなたは Adatum Corporation のロンドン ブランチ オフィスのシステム管理者です。 会社の仮想マシン (VM) とその他のリソースを実行するため、Microsoft Azure プラットフォームを評価する必要があります。 評価の一環として、Azure ベースのリソースの PowerShell 管理もテストする必要があります。
+
+## 目標
+
+このラボを完了すると、次のことができるようになります。
+
+- Az module for Windows PowerShell をインストールする。
+- Azure Cloud Shell 環境を実行して使用する。
+- PowerShell を使用して Azure VM とディスクを管理する。
+
+## ラボのセットアップ
+
+仮想マシン:**LON-DC1**、**LON-CL1**
+
+ユーザー名: **Adatum\\Administrator**
+
+パスワード: **Pa55w.rd**
+
+このラボでは、提供されている仮想マシン環境を使用します。 ラボを開始する前に、次の手順を行ってください。
+
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
+1. **LON-CL1** について手順 1 を繰り返します。
+
 ## 演習 1:Azure サブスクリプションのアクティブ化と PowerShell Az モジュールのインストール
+
+### シナリオ 1
+
+自分の環境で提供されている Azure サブスクリプションにサインインし、Windows PowerShell 用の AZ モジュールをインストールする必要があります。
+
+この演習の主なタスクは次のとおりです。
+
+1. Azure サブスクリプションにサインインします。
+1. Azure Az module for PowerShell をインストールする。
 
 #### タスク 1: Azure portal を開く
 
@@ -81,6 +115,14 @@ lab:
 
 ## 演習 2:Azure Cloud Shell の使用
 
+### シナリオ 2
+
+Azure VM などの他の Azure リソースを操作するには、Azure リソースグループを作成する必要があります。 このタスクを実行するには、Azure Cloud Shell を使用することを決定します。
+
+この演習の主なタスクは次のとおりです。
+
+- Azure Cloud Shell を使って、リソース グループを作成する。
+
 ### タスク 1: Azure Cloud Shell を使って、リソース グループを作成する
 
 1. **LON-CL1** のコンピューターで、Azure portal が表示されている Web ブラウザー ウィンドウに切り替えます。
@@ -119,6 +161,14 @@ lab:
 
 ## 演習 3:Azure PowerShell を使った Azure リソースの管理
 
+Azure サブスクリプションとリソース グループを作成したら、PowerShell を使用して、Windows Server 2022 イメージに基づいて Azure VM を作成します。
+
+この演習の主なタスクは次のとおりです。
+
+1. PowerShell を使用して Azure VM を作成する。
+1. PowerShell を使用して Azure VM にディスクを追加する。
+1. Azure リソースを削除する。
+
 ### タスク 1: PowerShell を使用して Azure VM を作成する
 
 1. PowerShell ウィンドウで次のコマンドを入力し、この演習で作成する Azure VM のオペレーティング システムの管理者資格情報を指定します。
@@ -136,7 +186,7 @@ lab:
      ResourceGroupName = '<resource-group-name>'
      Name = 'TestVM1'
      Location = 'westeurope'
-     ImageName = 'Win2019Datacenter'
+     ImageName = 'Win2022Datacenter'
      PublicIpAddressName = 'TestPublicIp'
      Credential = $cred
      OpenPorts = 3389
@@ -183,7 +233,7 @@ lab:
    mstsc.exe /v $publicIp.IpAddress
    ```
 
-1. プロンプトが表示されたら、Azure VM のプロビジョニング中に指定した管理者資格情報でサインインします。 Windows Server 2019 VM に接続していることを確認したら、オペレーティング システムをシャットダウンします。 これにより、リモート デスクトップ セッションが自動的に終了します。
+1. プロンプトが表示されたら、Azure VM のプロビジョニング中に指定した管理者資格情報でサインインします。 Windows Server 2022 VM に接続していることを確認したら、オペレーティング システムをシャットダウンします。 これにより、リモート デスクトップ セッションが自動的に終了します。
 
 ### タスク 2: PowerShell を使用して Azure VM にディスクを追加する
 

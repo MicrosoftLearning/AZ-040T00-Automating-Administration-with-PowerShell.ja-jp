@@ -60,7 +60,7 @@ lab:
 
 ### タスク 2: Azure Az module for PowerShell をインストールする
 
-1. **LON-CL1**で、PowerShell 7.1 環境を開始します。
+1. **LON-CL1** で、PowerShell 7 環境を開始します。
 1. PowerShell のバージョンを確認するには、`$PSVersionTable.PSVersion` を使用します。
 1. 現在のユーザーの実行ポリシーを **RemoteSigned** に設定します。
 1. PowerShell ギャラリーから、**install-module** コマンドを使用して、現在のユーザーの Az モジュールをインストールします。
@@ -97,15 +97,15 @@ Azure サブスクリプションとリソース グループを作成したら�
 
 ### タスク 1: PowerShell を使用して Azure VM を作成する
 
-1. PowerShell 7.1 ウィンドウで、**Get-Credential** コマンドを使用して、新しい Azure VM の管理者資格情報を `$cred` 変数に格納します。 ユーザー名として "**Admin**" や "**Administrator**" を使用せず、小文字、大文字、数字、および少なくとも 1 つの特殊文字を含む、8 文字以上の複雑なパスワードを選択してください。
-1. PowerShell 7.1 ウィンドウで、次のコマンドを使用して VM パラメーターを定義します (`<resource-group-name>` プレースホルダーは、前の演習で作成したリソース グループの名前に置き換えます)。
+1. PowerShell 7 ウィンドウで、**Get-Credential** コマンドを使用して、新しい Azure VM の管理者資格情報を `$cred` 変数に格納します。 ユーザー名として "**Admin**" や "**Administrator**" を使用せず、小文字、大文字、数字、および少なくとも 1 つの特殊文字を含む、8 文字以上の複雑なパスワードを選択してください。
+1. PowerShell 7 ウィンドウで、次のコマンドを使用して VM パラメーターを定義します (`<resource-group-name>` プレースホルダーは、前の演習で作成したリソース グループの名前に置き換えます)。
 
    ```powershell
    $vmParams = @{
      ResourceGroupName = '<resource-group-name>'
      Name = 'TestVM1'
      Location = 'westeurope'
-     ImageName = 'Win2019Datacenter'
+     ImageName = 'Win2022Datacenter'
      PublicIpAddressName = 'TestPublicIp'
      Credential = $cred
      OpenPorts = 3389

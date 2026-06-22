@@ -17,7 +17,45 @@ lab:
 
 このラボは完了するまで、約 **45** 分かかります。
 
+## シナリオ
+
+複数のコンピューターに管理情報のクエリを実行する必要があります。 まず、ローカル コンピューターと環境内の 1 つのテスト コンピューターからクエリを実行します。
+
+## 目標
+
+このラボを完了すると、次のことができるようになります。
+
+- Windows Management Instrumentation (WMI) コマンドを使用して情報についてのクエリを実行する。
+- Common Information Model (CIM) コマンドを使用して情報についてのクエリを実行する。
+- WMI および CIM コマンドを使用してメソッドを呼び出します。
+
+## ラボのセットアップ
+
+仮想マシン: **AZ-040T00A-LON-DC1** と** AZ-040T00A-LON-CL1**
+
+ユーザー名: **Adatum\\Administrator**
+
+パスワード: **Pa55w.rd**
+
+このラボでは、提供されている仮想マシン環境を使用します。 ラボを開始する前に、次の手順を行ってください。
+
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
+1. **LON-CL1** について手順 1 を繰り返します。
+
 ## 演習 1:WMI を使用した情報の照会
+
+> **注:** `Get-WmiObject` コマンドレットは、Windows PowerShell 5.1 でのみ使用できます。 PowerShell 7 では代わりに `Get-CimInstance` を使用してください (演習 2 を参照)。 この演習は必ず **Windows PowerShell** コンソール上で実行してください。
+
+### シナリオ 1
+
+この演習では、リポジトリ クラスを検出し、WMI コマンドを使用してこれに対するクエリを実行します。
+
+この演習の主なタスクは次のとおりです。
+
+1. IP アドレスのクエリを実行する。
+1. オペレーティング システムのバージョン情報のクエリを実行する。
+1. コンピューター システムのハードウェア情報のクエリを実行する。
+1. サービス情報のクエリを実行する。
 
 ### タスク 1: IP アドレスのクエリを実行する
 
@@ -116,6 +154,17 @@ lab:
 
 ## 演習 2:CIM を使用した情報の照会
 
+### シナリオ 2
+
+この演習では、新しいリポジトリ クラスを検出し、CIM コマンドを使用してクエリを実行します。
+
+この演習の主なタスクは次のとおりです。
+
+1. ユーザー アカウントのクエリを実行する。
+1. BIOS 情報のクエリを実行する。
+1. ネットワーク アダプターの構成情報のクエリを実行する。
+1. ユーザー グループ情報のクエリを実行する。
+
 ### タスク 1: ユーザー アカウントのクエリを実行する
 
 1. ユーザー アカウントを一覧表示するリポジトリ クラスを検索するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
@@ -190,6 +239,15 @@ lab:
 
 ## 演習 3:メソッドの呼び出し
 
+### シナリオ 3
+
+この演習では、WMI および CIM コマンドを使用して、リポジトリ オブジェクトのメソッドを呼び出します。
+
+この演習の主なタスクは次のとおりです。
+
+1. CIM メソッドを呼び出す。
+1. WMI メソッドを呼び出す。
+
 ### タスク 1: CIM メソッドを呼び出す
 
 1. **LON-DC1** を再起動するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
@@ -203,6 +261,8 @@ lab:
 
 ### タスク 2: WMI メソッドを呼び出す
 
+> **注:** `Get-WmiObject` と `Invoke-WmiMethod` は Windows PowerShell 5.1 でのみ使用できます。 PowerShell 7 では、CIM コマンドレット `Get-CimInstance -ClassName Win32_Service -Filter "Name='WinRM'" | Invoke-CimMethod -MethodName ChangeStartMode -Arguments @{StartMode='Automatic'}` を使用してください。
+
 1. WinRM サービスのプロパティを確認するには、**Windows PowerShell** コンソールで次のコマンドを入力して、Enter キーを押します。
     
     ```powershell
@@ -212,7 +272,7 @@ lab:
 1. 指定したサービスの起動モードを変更するには、**Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
     
     ```powershell
-    Get-WmiObject -Class Win32_Service -Filter "Name='WinRM'" | Invoke-WmiMethod -Name ChangeStartMode -Argument 'Automatic'
+    Get-WmiObject -Class Win32_Service -Filter "Name='WinRM'" | Invoke-WmiMethod -Name ChangeStartMode -ArgumentList 'Automatic'
     ```
 1. WinRM サービスの StartType が変更されたことを確認するには、**Windows PowerShell** コンソールで、次のコマンドを入力して、Enter キーを押します。
    

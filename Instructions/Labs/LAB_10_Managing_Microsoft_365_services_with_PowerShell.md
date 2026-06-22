@@ -26,7 +26,7 @@ lab:
 
 このラボを完了すると、次のことができるようになります。
 
-- Azure AD でユーザーを管理する。
+- Microsoft Entra ID でユーザーを管理します。
 - Exchange Online を管理する。
 - SharePoint Online の管理。
 - Microsoft Teams を管理する。
@@ -46,7 +46,7 @@ lab:
 
 > **注**: このラボでは、Office 365 テナントと、そのテナントでグローバル管理者のアクセス許可を持つユーザーが必要です。
 
-## 演習 1: Azure AD でユーザーとグループを管理する
+## 演習 1:Microsoft Entra ID でユーザーとグループを管理する
 
 ### 演習のシナリオ 1
 
@@ -54,53 +54,53 @@ lab:
 
 この演習の主なタスクは次のとおりです。
 
-1. Azure AD に接続します。
+1. Microsoft Entra ID に接続します。
 1. 新しい管理ユーザーを作成する。
 1. 新しいユーザーを作成してライセンスを付与する。
 
-### タスク 1: Azure AD に接続する
+### タスク 1:Microsoft Entra ID に接続する
 
 1. **LON-CL1** で、管理者として Windows PowerShell を開きます。
-1. Azure AD を管理できるようにするモジュールをインストールします。
-1. Azure AD に接続し、管理者ユーザー アカウントを使用してサインインします。
-1. 接続されていることを確認するには、Azure AD 内のユーザーの一覧を確認します。
+1. 現在のユーザーの実行ポリシーを **RemoteSigned** に設定します。
+1. 現在のユーザー向けに **Microsoft.Graph** モジュールをインストールします。
+1. 必要なスコープ (User.ReadWrite.All、Directory.ReadWrite.All、Group.ReadWrite.All、RoleManagement.ReadWrite.Directory) で Microsoft Graph に接続し、管理者ユーザー アカウントでサインインします。
+1. 接続されていることを確認するには、Microsoft Entra ID 内のユーザーの一覧を確認してください。
 
 ### タスク 2: 新しい管理ユーザーを作成する
 
-1. 変数に新しい **PasswordProfile** オブジェクトを作成し、**password** プロパティを設定します。
+1. パスワードと、`$true` に設定した `ForceChangePasswordNextSignIn` を含めた **PasswordProfile** ハッシュテーブルを作成します。
 1. 忘れないようにパスワードをメモします。
-1. 検証済みの Azure AD ドメインの名前を識別し、$verifiedDomain という名前の変数にそれを保存します。
-1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
+1. 検証済みの Microsoft Entra ID ドメインの名前を特定し、$verifiedDomain という名前の変数にそれを保存します。
+1. **New-MgUser** を使用して次の属性を持つ新しいユーザーを作成します。
    - 表示名: **Noreen Riggs**
    - ユーザー プリンシパル名: **Noreen@$verifiedDomain**
    - 有効なアカウント
    - MailNickName: **Noreen**
-1. グローバル管理者ロールを **Noreen Riggs** ユーザー アカウントに割り当てます。
-1. **Get-AzureADDirectoryRoleMember** コマンドレットを使用して、グローバル管理者ロールが **Noreen Riggs** ユーザー アカウントに割り当てられていることを確認します。
+1. **New-MgDirectoryRoleMemberByRef** を使用して、グローバル管理者ロールを **Noreen Riggs** ユーザー アカウントに割り当てます。
+1. **Get-MgDirectoryRoleMember** コマンドレットを使用して、グローバル管理者ロールが **Noreen Riggs** ユーザー アカウントに割り当てられていることを確認します。
 
 ### タスク 3: 新しいユーザーを作成してライセンスを付与する
 
-1. 次の属性を持つ **PasswordProfile** オブジェクトを使用して、新しいユーザー オブジェクトを作成します。
+1. **New-MgUser** を使用して次の属性を持つ新しいユーザーを作成します。
    - 表示名: **Allan Yoo**
    - ユーザー プリンシパル名: **Allan@$verifiedDomain**
    - 有効なアカウント
    - MailNickName: **Allan**
-1. Allan Yoo の利用場所を **[US]** に設定します。
-1. テナントで使用可能なライセンス SKU を一覧表示します。
-1. **AssignedLicense** オブジェクトを作成し、テナントの **Office_365_E5_(no_Teams)** ライセンスの *SkuID* 値を使用して、**SkuId** プロパティを構成します。
-1. **AssignedLicenses** オブジェクトを作成し、**AssignedLicense** オブジェクトを **AddLicenses** プロパティに配置します。
-1. **AssignedLicenses** オブジェクトを使用して、Allan Yoo にライセンスを割り当てます。
+1. **Update-MgUser** を使用して、Allan Yoo の使用場所を **[US]** に設定します。
+1. **Get-MgSubscribedSku** を使用して、テナント内で利用可能な加入済みの SKU を一覧表示します。
+1. **Office_365_E5_(no_Teams)** ライセンスの SKU ID を変数に格納します。
+1. **Set-MgUserLicense** を使用して、Allan Yoo にライセンスを割り当てます。
 
 ### タスク 4: グループを作成して設定する
 
-1. Azure AD 内のグループを一覧表示します。
-1. 次の属性を使用して、Azure AD に新しいグループ オブジェクトを作成します。
+1. **Get-MgGroup** を使用して、Microsoft Entra ID でグループを一覧表示します。
+1. 次の属性で **New-MgGroup** を使用して、新しいグループを作成します。
    - 表示名: **Sales Security Group**
    - セキュリティが有効: `$true`
    - メールが有効: `$false`
    - メール ニックネーム: **SalesSecurityGroup**
-1. Allan Yoo のユーザー オブジェクトを Sales Security Group のメンバーとして追加します。
-1. Sales Security Group メンバーシップに対してクエリを実行し、Allan Yoo のユーザー オブジェクトがそのメンバーであることを確認します。
+1. **New-MgGroupMember** を使用して、Allan Yoo のユーザー オブジェクトを Sales Security Group のメンバーとして追加します。
+1. **Get-MgGroupMember** を使用して、Sales Security Group メンバーシップに対してクエリを実行し、Allan Yoo のユーザー オブジェクトがそのメンバーであることを確認します。
 1. **[Windows PowerShell]** ウィンドウは開いたままにしておきます。
 
 ## 演習 2:Exchange Online を管理する
@@ -117,9 +117,9 @@ lab:
 
 ### タスク 1: Exchange Online に接続する
 
-1. **LON-CL1** で、同じ **[Windows PowerShell]** ウィンドウに、Exchange Online を管理できるモジュールをインストールします。
-1. Exchange Online に接続し、管理者ユーザー アカウントを使用してサインインします。
-1. 接続されていることを確認するには、Exchange Online 内のメールボックスの一覧を確認します。
+1. **LON-CL1** で、同じ **[Windows PowerShell]** ウィンドウに、**ExchangeOnlineManagement** モジュールをインストールします。
+1. **Connect-ExchangeOnline** を使用して、Exchange Online に接続し、管理者ユーザー アカウントを使用してサインインします。
+1. 接続されていることを確認するには、**Get-EXOMailbox** を使用して Exchange Online 内のメールボックスの一覧を確認します。
 
 ### タスク 2: 会議室メールボックスを作成する
 

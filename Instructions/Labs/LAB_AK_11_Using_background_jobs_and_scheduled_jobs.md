@@ -17,7 +17,43 @@ lab:
 
 このラボは完了するまで、約 **15** 分かかります。
 
+## シナリオ
+
+バックグラウンド ジョブは、複数のコマンドを同時に実行したり、実行時間の長いコマンドをバックグラウンドで実行したりするのに便利な方法です。 このラボでは、3 つの基本的な種類のジョブのうち、2 つを作成して管理する方法について説明します。
+
+スケジュールされた 2 つのジョブを作成して構成します。 また、特定のセキュリティ グループから無効になっているアカウントを検索して削除する Windows PowerShell スクリプトを使用して、スケジュールされたタスクを作成します。
+
+## 目標
+
+このラボを完了すると、次のことができるようになります。
+
+- ジョブを開始して管理する。
+- スケジュールされたジョブを作成する。
+
+## ラボのセットアップ
+
+仮想マシン: **LON-DC1**、**LON-SVR1**、および **LON-CL1**
+
+ユーザー名: **Adatum\\Administrator**
+
+パスワード: **Pa55w.rd**
+
+このラボでは、提供されている仮想マシン (VM) 環境を使用します。 ラボを開始する前に、次の手順を行ってください。
+
+1. **LON-DC1** を開き、パスワード **Pa55w.rd** を使って**Adatum\\Administrator** としてサインインします。
+1. **LON-SVR1** と **LON-CL1** に対して手順 1 を繰り返します。
+
 ## 演習 1:ジョブの開始と管理
+
+### 演習のシナリオ 1
+
+この演習では、2 つの基本的なジョブの種類を使用してジョブを開始します。
+
+この演習の主なタスクは次のとおりです。
+
+1. Windows PowerShell リモート ジョブを開始する
+1. ローカル ジョブを開始します。
+1. ジョブの状態を確認および管理します。
 
 ### タスク 1: Windows PowerShell リモート ジョブを開始する
 
@@ -55,6 +91,8 @@ lab:
    Start-Job –ScriptBlock { Get-EventLog –LogName Security } –Name LocalSecurity
    ```
 
+   > **注:** `Get-EventLog` は Windows PowerShell 5.1 でのみ使用できます。 PowerShell 7 では代わりに `Start-Job -ScriptBlock { Get-WinEvent -LogName Security } -Name LocalSecurity` を使用してください。
+
 1. 100 件のディレクトリの一覧を生成するローカル ジョブを開始するには、次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
@@ -91,13 +129,28 @@ lab:
    Receive-Job –Name RemoteNetAdapt
    ```
 
-1. **RemoteDisks** ジョブの結果を受け取るには、次のコマンドを入力して、Enter キーを押します。
+1. **RemoteDisks** ジョブの結果を **LON-DC1** からのみ受け取るには、次のコマンドを入力して、Enter キーを押します。
 
    ```powershell
-   Get-Job –Name RemoteDisks –IncludeChildJob | Receive-Job
+   Get-Job -Name RemoteDisks | 
+     Select-Object -ExpandProperty ChildJobs | 
+     Where-Object { $_.Location -eq 'LON-DC1' } | 
+     Receive-Job
    ```
 
 ## 演習 2:スケジュールされたジョブの作成
+
+> **注:** `Register-ScheduledJob` コマンドレットと **PSScheduledJob** モジュールは、Windows PowerShell 5.1 でのみ使用できます。 この演習を PowerShell 7 ではなく、Windows PowerShell 5.1 コンソール上で実行していることを必ず確認してください。
+
+### 演習のシナリオ 2
+
+この演習では、スケジュールされたジョブを作成して実行し、その結果を取得します。 次に、AD DS 内のセキュリティ グループから無効になっているユーザーを削除する Windows PowerShell スクリプトを使用してスケジュールされたタスクを作成して実行します。
+
+この演習の主なタスクは次のとおりです。
+
+1. ジョブ オプションとジョブ トリガーを作成します。
+1. スケジュールされたジョブを作成し、結果を取得します。
+1. スケジュールされたタスクとして、Windows PowerShell スクリプトを使用します。
 
 ### タスク 1: ジョブ オプションとジョブ トリガーを作成する
 

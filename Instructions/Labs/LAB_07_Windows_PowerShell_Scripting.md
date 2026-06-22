@@ -104,7 +104,9 @@ Adatum Corporation では、新しいボイス オーバー IP 通話 (VoIP) お
 
 ### タスク 2: ipPhone 属性を構成するためのスクリプトを作成する
 
-1. **E:\\Mod07\\Labfiles\\ipPhone.ps1** という名前のスクリプトを作成してから、Windows PowerShell ISE でそれを開きます。
+1. **E:\\Mod07\\Labfiles\\ipPhone.ps1** という名前のスクリプトを作成してから、Windows PowerShell ISE または Visual Studio Code でそれを開きます。
+
+   > **注:** Windows PowerShell ISE は、アクティブな機能開発の対象ではなくなったため、PowerShell 5.1 でもサポートされていません。 新しいスクリプト開発の場合、Microsoft は、**PowerShell 拡張機能を備えた Visual Studio Code** をお勧めします。
 1. **Get-ADGroupMember** を使用して、**IPPhoneTest** グループのメンバーシップを取得するためのクエリを作成します。
 1. **IPPhoneTest** のメンバーであるユーザーを処理する **ForEach** ループを作成します。
 1. ループで次のようにします。

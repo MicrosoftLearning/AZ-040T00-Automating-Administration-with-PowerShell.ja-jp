@@ -43,6 +43,8 @@ lab:
 
 ## 演習 1:WMI を使用した情報の照会
 
+> **注:** この演習で使用された `Get-WmiObject` コマンドレットは、Windows PowerShell 5.1 でのみ使用できます。 これは、Windows PowerShell 5.1 と PowerShell 7 の両方で動作する `Get-CimInstance` (演習 2 で使用) に置き換えられています。 この演習は、Windows PowerShell 5.1 コンソール上で実行する必要があります。
+
 ### シナリオ 1
 
 この演習では、リポジトリ クラスを検出し、WMI コマンドを使用してこれに対するクエリを実行します。
@@ -129,6 +131,8 @@ lab:
 - CIM コマンドと `Win32_OperatingSystem` の `Reboot` メソッドを使用して、**LON-CL1** からリモートで **LON-DC1** を再起動します。
 
 ### タスク 2: WMI メソッドを呼び出す
+
+> **注:** `Invoke-WmiMethod` コマンドレットは、Windows PowerShell 5.1 でのみ使用できます。 PowerShell 7 では代わりに `Invoke-CimMethod` を使用してください。
 
 1. `Get-Service` コマンドレットを使用して、**WinRM** サービスの **StartType** プロパティを確認します。
 1. WMI コマンドと `Win32_Service` の `ChangeStartMode` メソッドを使用して、**WinRM** サービスの開始モードを **[自動]** に変更します。
